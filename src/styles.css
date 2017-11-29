@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+div.centre {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background: red;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FAFAFA;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes opacity-transformation {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
+.loader {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: opacity-transformation 1500ms;
+}
+
+.circular {
+  animation: rotate 1500ms infinite;
+}
+
+@keyframes rotate {
+  80% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
