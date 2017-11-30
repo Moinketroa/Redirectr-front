@@ -33,9 +33,12 @@
   overflow: hidden;
 }
 
+.mat-card-link.a{
+  text-decoration: none;
+}
+
 .mat-card-description{
   padding-top: 10px;
   font-size: 13px;
   text-decoration: none;
-  color: lightslategrey;
 }
