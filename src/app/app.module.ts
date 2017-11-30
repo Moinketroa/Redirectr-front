@@ -7,8 +7,7 @@ import { MatToolbarModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
 import { HomeComponent } from './home/home.component';
-import { CardComponent } from './card/card.component';
-import { ListComponent } from './list/list.component';
+import { CardComponent, ListComponent } from './card/preview.component';
 
 @NgModule({
   declarations: [
