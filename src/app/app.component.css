@@ -1,14 +1,51 @@
+mat-toolbar {
+  position: fixed;
+}
+
 mat-toolbar.extend-toolbar {
   background-color: #0d47a1;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   z-index: 1;
   color: white;
-  margin-bottom: 10px;
+  width: 100%;
+  height:60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-mat-toolbar .flex {
-  flex: 1 1 auto;
+mat-toolbar .menu{
+  background-color: #0d47a1;
+  width: 85%;
+  height:60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  color: white;
+  z-index: 2;
+  display: flex;
+}
+
+mat-toolbar #inside_menu_left{
+  text-align: left;
+  margin-left: 8px;
+}
+
+mat-toolbar #inside_menu_center{
   text-align: center;
+}
+
+mat-toolbar .inside_menu{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  float: inherit;
+}
+
+mat-toolbar #inside_menu_right{
+  text-align: right;
+  margin-right: 20px;
+  margin-top: -15px;
 }
 
 mat-toolbar a {
@@ -20,23 +57,84 @@ mat-toolbar a {
   font-family: 'Roboto', sans-serif;
 }
 
-mat-toolbar a img:not(.active):hover {
+mat-toolbar a img {
   -webkit-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
   -moz-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
   -o-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
   filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  padding-top: 9px;
 }
 
-mat-toolbar a img {
-  -webkit-filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
-  -moz-filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
-  -o-filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
-  filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
+mat-toolbar a img:not(.active):hover {
+  -webkit-filter: drop-shadow(0 0px 3px white);
+  -moz-filter: drop-shadow(0 0px 3px white);
+  -o-filter: drop-shadow(0 0px 3px white);
+  filter: drop-shadow(0 0px 3px white);
   padding-top: 9px;
 }
 
 mat-toolbar p {
   float:right;
-  font-size: 18px;
-  padding-top: 1px;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+mat-toolbar .searchbar {
+  width: 400px;
+  height: 20px;
+  font-size: 13px;
+  color: #0d47a1;
+  cursor: pointer;
+}
+
+mat-toolbar .searchButton {
+  width: 100px;
+  margin-left: -5px;
+  height: 26px;
+  color: #0d47a1;
+  cursor: pointer;
+}
+
+mat-toolbar .searchFormula{
+  display: inline-flex;
+}
+
+mat-toolbar .menuLink{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+footer{
+  background-color: #0d47a1;
+  color: white;
+  width: 100%;
+  height:60px;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer_content{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  display: flex;
+}
+
+#copyright{
+  text-align: left;
+  width: 100%;
+}
+
+#a_propos{
+  text-align: right;
+  width: 100%;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.blank{
+  height: 70px;
 }
