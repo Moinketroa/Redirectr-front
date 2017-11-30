@@ -1,0 +1,42 @@
+mat-toolbar.extend-toolbar {
+  background-color: #0d47a1;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  z-index: 1;
+  color: white;
+  margin-bottom: 10px;
+}
+
+mat-toolbar .flex {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+mat-toolbar a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0px 10px 0px 10px;
+  font-size: 1.1em;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+
+mat-toolbar a img:not(.active):hover {
+  -webkit-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  -moz-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  -o-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+}
+
+mat-toolbar a img {
+  -webkit-filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
+  -moz-filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
+  -o-filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
+  filter: drop-shadow(0 0px 3px rgba(0,0,0,.8));
+  padding-top: 9px;
+}
+
+mat-toolbar p {
+  float:right;
+  font-size: 18px;
+  padding-top: 1px;
+}
