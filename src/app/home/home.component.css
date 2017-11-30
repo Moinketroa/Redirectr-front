@@ -55,3 +55,7 @@
 .space_for_footer{
   height:100px;
 }
+
+a {
+  text-decoration: none;
+}
