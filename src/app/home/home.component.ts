@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { REDIRECTRS } from '../_static/redirectrs';
+import { REDIRECTRS, TOP3 } from '../_static/redirectrs';
 
 @Component({
   selector: 'redirectr-home',
@@ -8,11 +8,12 @@ import { REDIRECTRS } from '../_static/redirectrs';
 })
 export class HomeComponent implements OnInit {
 
+  private _top3: any[];
   private _redirectrs: any[];
 
   constructor() {
+    this._top3 = TOP3;
     this._redirectrs = REDIRECTRS;
-    this._redirectrs.pop();
   }
 
   ngOnInit() {
@@ -22,4 +23,7 @@ export class HomeComponent implements OnInit {
     return this._redirectrs;
   }
 
+  get top3(): any[] {
+    return this._top3;
+  }
 }

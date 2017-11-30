@@ -1,11 +1,13 @@
 <div class="mat-list-content">
 
   <div class="mat-list-title">
-    Titre
+    {{ redirectr.title }}
   </div>
 
   <div class="mat-list-link">
-    Lien
+    <a href="/link/{{redirectr.id}}">
+      {{ link }}
+    </a>
   </div>
 
 </div>

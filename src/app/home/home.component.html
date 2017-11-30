@@ -7,7 +7,9 @@
       </div>
 
       <div class="top_redirectr_container">
-        <redirectr-card [redirectr]="redirectr" *ngFor="let redirectr of redirectrs"></redirectr-card>
+        <a href="#/redirectrs/{{ redirectr.id }}" *ngFor="let redirectr of top3">
+          <redirectr-card [redirectr]="redirectr"></redirectr-card>
+        </a>
       </div>
 
 
@@ -17,21 +19,9 @@
       </div>
 
       <div class="list_redirectr_container">
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
-        <redirectr-list></redirectr-list>
+        <a href="#/redirectrs/{{ redirectr.id }}" *ngFor="let redirectr of redirectrs">
+          <redirectr-list [redirectr]="redirectr"></redirectr-list>
+        </a>
       </div>
 
     </div>
