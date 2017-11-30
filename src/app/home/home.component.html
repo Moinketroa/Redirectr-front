@@ -2,13 +2,19 @@
 
     <div class="component_home">
 
+      <div id="container_big_logo">
+        <img src="../assets/images/icon.png" id="big_logo" aria-label="redirectr" alt="Redirectr">
+      </div>
+
       <div class="title">
         Top 3 des <span style="font-weight: bold">Redirectr</span> les plus visités
       </div>
 
       <div class="top_redirectr_container">
         <a href="#/redirectrs/{{ redirectr.id }}" *ngFor="let redirectr of top3">
-          <redirectr-card [redirectr]="redirectr"></redirectr-card>
+          <div class="inside_top_redirectr_container">
+            <redirectr-card [redirectr]="redirectr"></redirectr-card>
+          </div>
         </a>
       </div>
 
@@ -23,6 +29,8 @@
           <redirectr-list [redirectr]="redirectr"></redirectr-list>
         </a>
       </div>
+
+      <div class="space_for_footer"></div>
 
     </div>
 

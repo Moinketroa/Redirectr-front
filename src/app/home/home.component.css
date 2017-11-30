@@ -23,7 +23,14 @@
 }
 
 .top_redirectr_container{
-  display: flex;
+  display: inline-flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inside_top_redirectr_container{
+  width: 27vw;
 }
 
 .list_redirectr_container{
@@ -32,3 +39,19 @@
   margin-right: auto;
 }
 
+#big_logo{
+  width: 100px;
+  height: 100px;
+}
+
+#container_big_logo{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.space_for_footer{
+  height:100px;
+}
