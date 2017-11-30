@@ -43,4 +43,4 @@ export const REDIRECTRS = [
     'description': 'There is no link here :/',
     'clicks': 3
   }
-]
+];
