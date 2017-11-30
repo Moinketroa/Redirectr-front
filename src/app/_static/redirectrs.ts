@@ -28,7 +28,7 @@ export const REDIRECTRS = [
   {
     'id': 67890,
     'title': 'Never Gonna Shoot Your Stars',
-    'description': 'Never Gonna Give You Up - Shooting Stars Mashup by Grandayy',
+    'description': 'Never Gonna Give You Up - Shooting Stars Mashup by Grandayy Big thanks to my patrons: Auntie Butt Raide, Paul Girard, Teun Roelandt, Jack Danks, Jessica-Ioana Patrascu, Greg Paris, Nuclear Lime Created by Grandayy Big Thanks to everyone and especially Rick Astley thx thx thx lorem ipsum blabla create merschtatik',
     'clicks': 12000,
     'main_link': 0,
     'links': [
@@ -38,7 +38,7 @@ export const REDIRECTRS = [
     ]
   },
   {
-    'id': 09876,
+    'id': 9876,
     'title': 'Empty Example',
     'description': 'There is no link here :/',
     'clicks': 3

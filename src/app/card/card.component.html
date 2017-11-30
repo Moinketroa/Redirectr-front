@@ -1,15 +1,19 @@
 <div class="mat-card-content">
 
   <div class="mat-card-title">
-    Titre
+    {{ redirectr.title }}
   </div>
 
   <div class="mat-card-link">
-    Lien
+    <a href="/link/{{redirectr.id}}">
+      {{ link }}
+    </a>
+
   </div>
 
   <div class="mat-card-description">
-    <span style="font-weight: bold; font-size:14px">Description : </span> C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir ! C'est vraiment cool comme musique vous allez voir ce que vous allez voir !  C'est vraiment cool comme musique vous allez voir ce que vous allez voir !
+    <span style="font-weight: bold; font-size:14px">Description : </span><br/><br/>
+    {{ redirectr.description }}
   </div>
 
 </div>

@@ -7,10 +7,10 @@
       </div>
 
       <div class="top_redirectr_container">
-        <redirectr-card></redirectr-card>
-        <redirectr-card></redirectr-card>
-        <redirectr-card></redirectr-card>
+        <redirectr-card [redirectr]="redirectr" *ngFor="let redirectr of redirectrs"></redirectr-card>
       </div>
+
+
 
       <div class="title">
         Liste des <span style="font-weight: bold">Redirectr</span>

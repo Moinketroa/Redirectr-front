@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { REDIRECTRS } from '../_static/redirectrs';
 
 @Component({
   selector: 'redirectr-home',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  private _redirectrs: any[];
+
+  constructor() {
+    this._redirectrs = REDIRECTRS;
+    this._redirectrs.pop();
+  }
 
   ngOnInit() {
+  }
+
+  get redirectrs(): any[] {
+    return this._redirectrs;
   }
 
 }
