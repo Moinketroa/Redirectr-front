@@ -1,21 +1,38 @@
 <mat-toolbar class="extend-toolbar">
-  <div class="left">
-    <a [routerLink]="['/']">
-      <img src="../assets/images/icon.png" aria-label="redirectr" alt="Redirectr" width="50" height="50">
-      <p>Redirectr</p>
-    </a>
-  </div>
 
-  <div class="flex">
-    *je suis une barre de recherche*
-  </div>
+  <div class="menu">
+    <div class="inside_menu" id="inside_menu_left">
+      <a [routerLink]="['/']">
+        <img src="../assets/images/icon.png" aria-label="redirectr" alt="Redirectr" width="50" height="50">
+        <p>Redirectr</p>
+      </a>
+    </div>
 
-  <div class="right">
-    <a [routerLink]="['/']">
-      <p>Ajouter un redirectr...</p>
-    </a>
-  </div>
+    <div class="inside_menu" id="inside_menu_center">
+      <form action="" class="formulaire">
+        <div class="searchFormula">
+          <input class="searchbar" type="text" value="Saisir un titre ici..."/>
+          <button (click)="search()" class="searchButton">Rechercher</button>
+        </div>
+      </form>
+    </div>
 
+    <div class="inside_menu" id="inside_menu_right">
+      <a [routerLink]="['/']">
+        <div class="menuLink">Ajouter un <span style="text-decoration: underline">Redirectr</span></div>
+      </a>
+    </div>
+  </div>
 </mat-toolbar>
 
+<div class="blank"></div>
+
 <router-outlet></router-outlet>
+
+
+<footer>
+  <div class="footer_content">
+    <div id="copyright">© Copyright</div>
+    <div id="a_propos">À propos</div>
+  </div>
+</footer>
