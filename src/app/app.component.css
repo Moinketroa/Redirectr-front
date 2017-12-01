@@ -135,6 +135,10 @@ footer{
   cursor: pointer;
 }
 
+#a_propos a {
+  color: white;
+}
+
 .blank{
   height: 70px;
 }
