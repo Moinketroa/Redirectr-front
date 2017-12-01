@@ -5,7 +5,9 @@
   </div>
 
   <div class="mat-redirectr-link">
-    localhost:4242/link/{{ redirectr.id }}
+    <a [routerLink]="['/link', redirectr.id]">
+      localhost:4242/#/link/{{ redirectr.id }}
+    </a>
   </div>
 
   <div class="mat-redirect-description">
@@ -34,7 +36,7 @@
       <div class="center"></div>
 
       <div class="right">
-        <span class="material-icons" style="color:#EF5350">error_outline</span>
+        <span class="material-icons icon" style="color:#EF5350">error_outline</span>
         <span class="material-icons">star</span>
       </div>
     </mat-list-item>
@@ -49,8 +51,8 @@
       <div class="center"></div>
 
       <div class="right">
-        <span class="material-icons" style="color:#EF5350">error_outline</span>
-        <span class="material-icons">star_border</span>
+        <span class="material-icons icon" style="color:#EF5350">error_outline</span>
+        <span class="material-icons icon">star_border</span>
       </div>
     </mat-list-item>
   </div>
@@ -60,13 +62,13 @@
       Il n'y a aucun lien de redirection ici, ajoutez-en un !
     </div>
     <div class="left" *ngIf="redirectr.main_link >= 0">
-      Ajoutez un lien de backup ! {{ redirectr.main_link }}
+      Ajoutez un lien de backup !
     </div>
 
     <div class="center"></div>
 
     <div class="right">
-      <span class="material-icons">add</span>
+      <span class="material-icons icon">add</span>
     </div>
   </mat-list-item>
 </mat-list>

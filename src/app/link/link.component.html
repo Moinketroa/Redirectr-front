@@ -1,3 +1,39 @@
-<a #hiddenDiv style="visibility: hidden" target="_blank" href="http://google.com">Link</a>
+<a #hiddenDiv style="visibility: hidden" target="_blank" href="">Link</a>
 
+<div class="mat-redirect-content">
+  <div *ngIf="redirectr.main_link >= 0">
+    <div class="mat-link-p">
+      Vous venez d'être redirigé vers : <a href="{{ link }}" target="_blank">{{ link }}</a>
+    </div>
 
+    <div class="mat-link-p">
+      Si la redirectrion ne s'est pas passé comme voulu vous pouvez <a href="/">Signaler le lien comme mort...</a>
+    </div>
+
+    <div class="mat-link-p">
+      Ou vous pouvez aidez la communauté Redirectr en <a href="/">Ajoutant un autre lien de redirection vers le même sujet...</a>
+    </div>
+  </div>
+
+  <div *ngIf="!(redirectr.main_link >= 0)">
+    <div class="mat-link-p">
+      Redirectr ne dispose d'aucun lien de redirection valide pour le sujet que vous recherchez
+    </div>
+
+    <div class="mat-link-p">
+      Le Redirectr associé est affiché ci-dessous, si le sujet vous est familier et vous savez où le trouver vous pouvez <a href="/">Ajouter un lien de redirection vers le même sujet...</a>
+    </div>
+
+    <div class="mat-link-p">
+      Cela aiderait grandement la communauté Redirectr !
+    </div>
+  </div>
+</div>
+
+<div class="blue_line"></div>
+
+<div class="mat-redirect-title">
+  Redirectr associé
+</div>
+
+<redirectr-redirectr></redirectr-redirectr>

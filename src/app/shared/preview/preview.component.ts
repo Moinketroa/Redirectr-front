@@ -16,7 +16,7 @@ class PreviewComponent implements OnInit {
    */
   constructor() {
     this._redirectr = {};
-    this._path = 'localhost:4242/link/';
+    this._path = 'localhost:4242/#/link/';
   }
 
   ngOnInit(): void {

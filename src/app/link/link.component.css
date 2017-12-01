@@ -1,0 +1,40 @@
+.mat-redirect-content {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),
+  0 2px 2px 0 rgba(0,0,0,.14),
+  0 3px 1px -2px rgba(0,0,0,.12);
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.blue_line{
+  height: 2px;
+  background-color: #0d47a1;
+  margin-top: 10px;
+  width: 101vmax;
+  margin-left: -13.5%;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,.4);
+}
+
+.mat-redirect-title{
+  font-size: 26px;
+  text-decoration: none;
+  height: 30px;
+  text-align: center;
+  padding-top: 12px;
+  color: #0d47a1;
+}
+
+.mat-link-p {
+  font-size: 17px;
+  text-decoration: none;
+  color: #0d47a1;
+  min-height: 20px;
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-top: 10px;
+}

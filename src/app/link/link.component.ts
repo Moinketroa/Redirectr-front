@@ -14,10 +14,12 @@ export class LinkComponent implements OnInit {
 
   private _redirectr: any;
   private _id: string;
+  private _mainLink: string;
 
   constructor(private _route: ActivatedRoute, private _router: Router, private _renderer: Renderer2, private _element: ElementRef) {
     this._redirectr = {'id': 'ffffffffff'};
     this._id = 'd';
+    this._mainLink = '';
   }
 
   ngOnInit() {
@@ -27,11 +29,12 @@ export class LinkComponent implements OnInit {
       .subscribe();
     this._redirectr = REDIRECTRS.find((redirectr: any) => redirectr.id.toString() === this._id);
 
-    let mainLinkIndex = this._redirectr.main_link;
-    let mainLink = this._redirectr.links[mainLinkIndex];
+    if (this.redirectr.main_link >= 0) {
+      this._mainLink = this._redirectr.links[this._redirectr.main_link];
 
-    this._renderer.setProperty(this.hidden.nativeElement, 'href', mainLink);
-    this.hidden.nativeElement.click();
+      this._renderer.setProperty(this.hidden.nativeElement, 'href', this._mainLink);
+      this.hidden.nativeElement.click();
+    }
   }
 
   get redirectr(): any {
@@ -43,12 +46,6 @@ export class LinkComponent implements OnInit {
   }
 
   get link(): string {
-    this._mainLink = this._redirectr.main_link;
-    return this._redirectr.links[this._mainLink];
+    return this._mainLink;
   }
-
-  get something(): string {
-    return "dhjdh";
-  }
-
 }
