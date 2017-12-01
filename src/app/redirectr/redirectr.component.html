@@ -1,34 +1,48 @@
-<div class="title">
-  {{ redirectr.title }}
-</div>
+<div class="mat-redirect-content">
 
-<div class="redirectr-link">
-  localhost:4242/link/{{ redirectr.id }}
-</div>
-
-<div class="description-content">
-  <div class="description-title">
-    Description :
+  <div class="mat-redirect-title">
+    {{ redirectr.title }}
   </div>
 
-  <div class="description-p">
-    {{ redirectr.description }}
+  <div class="mat-redirectr-link">
+    localhost:4242/link/{{ redirectr.id }}
   </div>
-</div>
 
-<div class="grey-line"></div>
-
-<div class="links" *ngIf="redirectr.main_link >= 0">
-  <div *ngFor="let link of redirectr.links; let i = index">
-    <div class="main-link" *ngIf="redirectr.main_link === i">
-      main link ! {{ link }}
+  <div class="mat-redirect-description">
+    <div class="mat-description-title">
+      Description :
     </div>
-    <div class="backup-link" *ngIf="redirectr.main_link != i">
-      backup link : {{ link }}
-    </div>
-  </div>
-</div>
 
-<div class="links" *ngIf="redirectr.main_link === -1">
-  no links !
+    <div class="mat-description-p">
+      {{ redirectr.description }}
+    </div>
+
+  </div>
+
+  <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
+
+    <div class="grey-line">
+    </div>
+
+    <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
+      <div *ngFor="let link of redirectr.links; let i = index">
+        <div class="mat-redirect-main-link" *ngIf="redirectr.main_link === i">
+          Lien principal : {{ link }}
+        </div>
+      </div>
+    </div>
+
+    <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
+      <div *ngFor="let link of redirectr.links; let i = index">
+        <div class="mat-redirect-main-link" *ngIf="redirectr.main_link === i">
+          Lien secondaire :
+        </div>
+        <div class="mat-redirect-backup-link" *ngIf="redirectr.main_link != i">
+          {{ link }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>

@@ -1,0 +1,79 @@
+.mat-redirect-content {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),
+  0 2px 2px 0 rgba(0,0,0,.14),
+  0 3px 1px -2px rgba(0,0,0,.12);
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-redirect-content:hover {
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),
+  0 24px 38px 3px rgba(0,0,0,.14),
+  0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+.mat-redirect-title{
+  font-size: 26px;
+  text-decoration: none;
+  height: 30px;
+  text-align: center;
+  color: #0d47a1;
+}
+
+.mat-redirectr-link {
+  font-size: 16px;
+  text-decoration: none;
+  height: 30px;
+  text-align: center;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+.mat-description-title{
+  font-size: 15x;
+  text-decoration: underline;
+  text-align: left;
+  font-weight: bold;
+  color: #0d47a1;
+  height: 20px;
+}
+
+.mat-description-p{
+  font-size: 15px;
+  text-decoration: none;
+  text-align: left;
+  color: #0d47a1;
+  min-height: 20px;
+}
+
+.grey-line{
+  height: 1px;
+  background-color: grey;
+  margin-left: -15px;
+  margin-right: -15px;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,.4);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mat-redirect-main-link{
+  font-size: 15px;
+  text-decoration: none;
+  text-align: left;
+  font-weight: bold;
+  color: grey;
+  height: 20px;
+}
+
+.mat-redirect-backup-link{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  color: grey;
+  height: 20px;
+}
+
