@@ -31,3 +31,7 @@
   color: grey;
   font-size: 15px;
 }
+
+.mat-list-link:hover{
+  font-size: 13px;
+}

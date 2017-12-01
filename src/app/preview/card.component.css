@@ -21,7 +21,7 @@
 .mat-card-title{
   font-size: 26px;
   text-decoration: none;
-  height: 60px;
+  height: 30px;
   overflow: hidden;
 }
 
@@ -29,16 +29,28 @@
   text-decoration: underline;
   color: grey;
   font-size: 15px;
-  height: 20px;
   overflow: hidden;
 }
 
-.mat-card-link.a{
-  text-decoration: none;
+.mat-card-link a{
+  text-decoration: underline;
+  color: grey;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.mat-card-link a:hover{
+  font-size: 14px;
 }
 
 .mat-card-description{
   padding-top: 10px;
+  height: 90%;
+  width: 95%;
+  margin-top: -1px;
   font-size: 13px;
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
 }

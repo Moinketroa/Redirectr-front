@@ -138,3 +138,9 @@ footer{
 .blank{
   height: 70px;
 }
+
+.inner_content{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

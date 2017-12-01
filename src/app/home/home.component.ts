@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { REDIRECTRS, TOP3 } from '../_static/redirectrs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'redirectr-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   private _top3: any[];
   private _redirectrs: any[];
 
-  constructor() {
+  constructor(private _router: Router) {
     this._top3 = TOP3;
     this._redirectrs = REDIRECTRS;
   }
