@@ -58,7 +58,7 @@ export const REDIRECTRS = [
     'title': 'Definition de confiture',
     'description': 'Description du mot confiture',
     'clicks': 52,
-    'main_link': 0,
+    'main_link': 2,
     'links': [
       'http://www.larousse.fr/dictionnaires/francais/confiture/18121',
       'http://www.linternaute.com/dictionnaire/fr/definition/confiture/',

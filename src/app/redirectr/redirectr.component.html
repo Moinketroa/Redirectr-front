@@ -33,10 +33,8 @@
     </div>
 
     <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
+      <div class="mat-redirect-main-link"> Liens secondaires : </div>
       <div *ngFor="let link of redirectr.links; let i = index">
-        <div class="mat-redirect-main-link" *ngIf="redirectr.main_link === i">
-          Lien secondaire :
-        </div>
         <div class="mat-redirect-backup-link" *ngIf="redirectr.main_link != i">
           {{ link }}
         </div>
