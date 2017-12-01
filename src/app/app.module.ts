@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { CardComponent, ListComponent } from './shared/preview/preview.component';
 import { RedirectrComponent } from './redirectr/redirectr.component';
 import { AboutComponent } from './about/about.component';
+import { LinkComponent } from './link/link.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutComponent } from './about/about.component';
     CardComponent,
     ListComponent,
     RedirectrComponent,
-    AboutComponent
+    AboutComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,

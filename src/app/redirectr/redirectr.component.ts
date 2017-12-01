@@ -24,11 +24,11 @@ export class RedirectrComponent implements OnInit {
       .map((params: any) => params.id)
       .flatMap((id: string) => this._id = id)
       .subscribe();
+    this._redirectr = REDIRECTRS.find((redirectr: any) => redirectr.id.toString() === this._id);
   }
 
   get redirectr(): any {
-    // return this._redirectr;
-    return REDIRECTRS.find((redirectr: any) => redirectr.id.toString() === this._id);
+    return this._redirectr;
   }
 
   set redirectr(value: any) {

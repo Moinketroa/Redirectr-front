@@ -6,7 +6,7 @@
 
 
   <div class="mat-card-link">
-    <a href="/link/{{redirectr.id}}">
+    <a [routerLink]="['/link', redirectr.id]">
       {{ link }}
     </a>
   </div>
