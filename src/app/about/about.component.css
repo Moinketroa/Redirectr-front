@@ -1,0 +1,44 @@
+.about_all_content{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
+  color: #0d47a1;
+  text-align: center;
+  height: 10px;
+}
+
+#big_logo {
+  -webkit-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  -moz-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  -o-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
+  width: 150px;
+}
+
+#big_logo:hover {
+  -webkit-filter: drop-shadow(0 0px 3px black);
+  -moz-filter: drop-shadow(0 0px 3px black);
+  -o-filter: drop-shadow(0 0px 3px black);
+  filter: drop-shadow(0 0px 3px black);
+}
+
+.container_about_us{
+  margin-top: 20px;
+}
+
+.about_us_title{
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.about_us_description{
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}

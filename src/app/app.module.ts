@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent, ListComponent } from './preview/preview.component';
 import { RedirectrComponent } from './redirectr/redirectr.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RedirectrComponent } from './redirectr/redirectr.component';
     HomeComponent,
     CardComponent,
     ListComponent,
-    RedirectrComponent
+    RedirectrComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
