@@ -15,32 +15,60 @@
 
     <div class="mat-description-p">
       {{ redirectr.description }}
+
+      {{ redirectr.main_link }}
     </div>
 
   </div>
-
-  <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
-
-    <div class="grey-line">
-    </div>
-
-    <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
-      <div *ngFor="let link of redirectr.links; let i = index">
-        <div class="mat-redirect-main-link" *ngIf="redirectr.main_link === i">
-          Lien principal : {{ link }}
-        </div>
-      </div>
-    </div>
-
-    <div class="mat-redirect-links" *ngIf="redirectr.main_link >= 0">
-      <div class="mat-redirect-main-link"> Liens secondaires : </div>
-      <div *ngFor="let link of redirectr.links; let i = index">
-        <div class="mat-redirect-backup-link" *ngIf="redirectr.main_link != i">
-          {{ link }}
-        </div>
-      </div>
-    </div>
-
-  </div>
-
 </div>
+
+<div class="mat-redirect-title">
+  Liens de redirections :
+</div>
+
+<mat-list>
+  <div *ngFor="let link of redirectr.links; let i = index">
+    <mat-list-item *ngIf="redirectr.main_link === i">
+      <a class="left" href="{{ link }}">
+        {{ link }}
+      </a>
+
+      <div class="center"></div>
+
+      <div class="right">
+        <span class="material-icons" style="color:#EF5350">error_outline</span>
+        <span class="material-icons">star</span>
+      </div>
+    </mat-list-item>
+  </div>
+
+  <div *ngFor="let link of redirectr.links; let i = index">
+    <mat-list-item *ngIf="redirectr.main_link != i">
+      <a class="left" href="{{ link }}">
+        {{ link }}
+      </a>
+
+      <div class="center"></div>
+
+      <div class="right">
+        <span class="material-icons" style="color:#EF5350">error_outline</span>
+        <span class="material-icons">star_border</span>
+      </div>
+    </mat-list-item>
+  </div>
+
+  <mat-list-item>
+    <div class="left" *ngIf="!(redirectr.main_link >= 0)">
+      Il n'y a aucun lien de redirection ici, ajoutez-en un !
+    </div>
+    <div class="left" *ngIf="redirectr.main_link >= 0">
+      Ajoutez un lien de backup ! {{ redirectr.main_link }}
+    </div>
+
+    <div class="center"></div>
+
+    <div class="right">
+      <span class="material-icons">add</span>
+    </div>
+  </mat-list-item>
+</mat-list>

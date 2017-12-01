@@ -5,13 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // Material Design Imports
-import { MatToolbarModule } from '@angular/material';
+import { MatIconModule, MatListModule, MatToolbarModule } from '@angular/material';
 
 import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CardComponent, ListComponent } from './preview/preview.component';
+import { CardComponent, ListComponent } from './shared/preview/preview.component';
 import { RedirectrComponent } from './redirectr/redirectr.component';
 import { AboutComponent } from './about/about.component';
 
@@ -27,6 +27,8 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     MatToolbarModule,
+    MatListModule,
+    MatIconModule,
     APP_ROUTES
   ],
   providers: [],
