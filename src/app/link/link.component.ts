@@ -29,11 +29,13 @@ export class LinkComponent implements OnInit {
       .subscribe((redirectr: any) => { this._redirectr = redirectr;
         this._mainIndex = redirectr.main_link;
         if (this._mainIndex >= 0) {
-          this._mainLink = this._redirectr.links[this._mainIndex];
+          this._mainLink = redirectr.links[this._mainIndex];
 
           this._renderer.setProperty(this.hidden.nativeElement, 'href', this._mainLink);
           this.hidden.nativeElement.click();
         }
+        this._redirectrService.access(redirectr)
+          .subscribe((red: any) => this._redirectr = red);
       });
   }
 

@@ -14,7 +14,7 @@ export const environment = {
       top3Redirectrs: '/api/redirectrs/top3',
       searchRedirectrs: '/api/redirectrs/search/:tags',
       oneRedirectrs: '/api/redirectrs/:id',
-      accesRedirectrs: '/api/redirectrs/access/:id'
+      accessRedirectrs: '/api/redirectrs/access/:id',
     }
   }
 };

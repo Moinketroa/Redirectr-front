@@ -5,6 +5,7 @@ import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/defaultIfEmpty';
 import 'rxjs/add/operator/filter';
+import { Console } from '@angular/core/src/console';
 
 @Injectable()
 export class RedirectrService {
@@ -51,7 +52,7 @@ export class RedirectrService {
   }
 
   update(redirectr: any): Observable<any> {
-    return this._http.put(this._backendURL.oneRedirectrs.replace(':id', redirectr.id), redirectr);
+    return this._http.put(this._backendURL.oneRedirectrs.replace(':id', redirectr.id), this._condensedVersion(redirectr), this._options());
   }
 
   delete(id: string): Observable<any[]> {
@@ -61,7 +62,7 @@ export class RedirectrService {
   }
 
   access(redirectr: any): Observable<any> {
-    return this._http.put(this._backendURL.accessRedirectrs.replace(':id', redirectr.id), redirectr, this._options());
+    return this._http.put(this._backendURL.accessRedirectrs.replace(':id', redirectr.id), this._accessVersion(redirectr), this._options());
   }
 
   /**
@@ -72,5 +73,20 @@ export class RedirectrService {
   private _options(headerList: Object = {}): any {
     const headers = new HttpHeaders(Object.assign({ 'Content-Type': 'application/json' }, headerList));
     return { headers };
+  }
+
+  private _condensedVersion(redirectr: any): any {
+    let redirectr_res: any = {};
+    redirectr_res.title = redirectr.title;
+    redirectr_res.description = redirectr.description;
+    redirectr_res.main_link = redirectr.main_link;
+    redirectr_res.links = redirectr.links;
+    return redirectr_res;
+  }
+
+  private _accessVersion(redirectr: any): any {
+    let redirectr_res: any = this._condensedVersion(redirectr);
+    redirectr_res.clicks = redirectr.clicks;
+    return redirectr_res;
   }
 }

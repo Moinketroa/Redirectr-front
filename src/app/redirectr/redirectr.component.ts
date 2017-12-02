@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
@@ -27,7 +27,14 @@ export class RedirectrComponent implements OnInit {
     return this._redirectr;
   }
 
+  @Input()
   set redirectr(value: any) {
     this._redirectr = value;
+  }
+
+  changeMainLink(index: number) {
+    this._redirectr.main_link = index;
+    this._redirectrService.update(this._redirectr)
+      .subscribe((redirectr: any) => this._redirectr = redirectr);
   }
 }
