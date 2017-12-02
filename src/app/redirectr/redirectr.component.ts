@@ -37,4 +37,17 @@ export class RedirectrComponent implements OnInit {
     this._redirectrService.update(this._redirectr)
       .subscribe((redirectr: any) => this._redirectr = redirectr);
   }
+
+  reportLink(index: number) {
+    this._redirectr.links.splice(index, 1);
+
+    if (this._redirectr.main_link == index){
+      this._redirectr.main_link = this._redirectr.links.length - 1; // last link is now main_link
+    } else if (this._redirectr.main_link > index) {
+      this._redirectr.main_link = this._redirectr.main_link - 1; // shifting main_link index
+    }
+
+    this._redirectrService.update(this._redirectr)
+      .subscribe((redirectr: any) => this._redirectr = redirectr);
+  }
 }
