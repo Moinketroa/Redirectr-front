@@ -138,3 +138,27 @@ mat-list {
   -o-filter: drop-shadow(0 1px 5px rgba(0,0,0,.7));
   filter: drop-shadow(0 1px 5px rgba(0,0,0,.7));
 }
+
+.report .hov {
+  display: none;
+}
+
+.report:hover .hov {
+  display: inline-block;
+}
+
+.report:hover .regular {
+  display: none;
+}
+
+.right-icon-change .hov {
+  display: none;
+}
+
+.right-icon-change:hover .hov{
+  display: inherit;
+}
+
+.right-icon-change:hover .regular{
+  display: none;
+}

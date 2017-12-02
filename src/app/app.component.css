@@ -57,12 +57,13 @@ mat-toolbar a {
   font-family: 'Roboto', sans-serif;
 }
 
+
 mat-toolbar a img {
   -webkit-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
   -moz-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
   -o-filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
   filter: drop-shadow(0 0px 3px rgba(0,0,0,.5));
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
 mat-toolbar a img:not(.active):hover {
@@ -70,7 +71,6 @@ mat-toolbar a img:not(.active):hover {
   -moz-filter: drop-shadow(0 0px 3px white);
   -o-filter: drop-shadow(0 0px 3px white);
   filter: drop-shadow(0 0px 3px white);
-  padding-top: 9px;
 }
 
 mat-toolbar p {
@@ -147,4 +147,8 @@ footer{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-logo:hover{
+  animation: rotate 1500ms;
 }
