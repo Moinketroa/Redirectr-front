@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, Renderer, Renderer2, ViewChild } from '@
 import { ActivatedRoute, Router } from '@angular/router';
 import { REDIRECTRS } from '../_static/redirectrs';
 import { main } from '@angular/compiler-cli/src/main';
+import { RedirectrService } from '../shared/redirectr-service/redirectr.service';
 
 @Component({
   selector: 'redirectr-link',
@@ -13,28 +14,27 @@ export class LinkComponent implements OnInit {
   @ViewChild('hiddenDiv') hidden: ElementRef;
 
   private _redirectr: any;
-  private _id: string;
   private _mainLink: string;
+  private _mainIndex: number;
 
-  constructor(private _route: ActivatedRoute, private _router: Router, private _renderer: Renderer2, private _element: ElementRef) {
-    this._redirectr = {'id': 'ffffffffff'};
-    this._id = 'd';
+  constructor(private _route: ActivatedRoute, private _redirectrService: RedirectrService, private _renderer: Renderer2) {
+    this._redirectr = {};
     this._mainLink = '';
+    this._mainIndex = -1;
   }
 
   ngOnInit() {
     this._route.params
-      .map((params: any) => params.id)
-      .flatMap((id: string) => this._id = id)
-      .subscribe();
-    this._redirectr = REDIRECTRS.find((redirectr: any) => redirectr.id.toString() === this._id);
+      .flatMap(params => this._redirectrService.fetchOne(params['id']))
+      .subscribe((redirectr: any) => { this._redirectr = redirectr;
+        this._mainIndex = redirectr.main_link;
+        if (this._mainIndex >= 0) {
+          this._mainLink = this._redirectr.links[this._mainIndex];
 
-    if (this.redirectr.main_link >= 0) {
-      this._mainLink = this._redirectr.links[this._redirectr.main_link];
-
-      this._renderer.setProperty(this.hidden.nativeElement, 'href', this._mainLink);
-      this.hidden.nativeElement.click();
-    }
+          this._renderer.setProperty(this.hidden.nativeElement, 'href', this._mainLink);
+          this.hidden.nativeElement.click();
+        }
+      });
   }
 
   get redirectr(): any {

@@ -31,7 +31,7 @@ export class RedirectrService {
   }
 
   fetchOne(id: string): Observable<any> {
-    return this._http.get(this._backendURL.oneRedirectrs, this._options());
+    return this._http.get(this._backendURL.oneRedirectrs.replace(':id', id), this._options());
   }
 
   fetchTop3(): Observable<any[]> {

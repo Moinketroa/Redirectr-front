@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import 'rxjs/add/operator/map';
-import { REDIRECTRS } from '../_static/redirectrs';
 import 'rxjs/add/operator/mergeMap';
 import { RedirectrService } from '../shared/redirectr-service/redirectr.service';
 
@@ -13,22 +12,15 @@ import { RedirectrService } from '../shared/redirectr-service/redirectr.service'
 export class RedirectrComponent implements OnInit {
 
   private _redirectr: any;
-  private _id: string;
 
-  constructor(private _redirectrService: RedirectrService, private _route: ActivatedRoute, private _router: Router) {
-    this._redirectr = {'id': 'ffffffffff'};
-    this._id = 'd';
+  constructor(private _redirectrService: RedirectrService, private _route: ActivatedRoute) {
+    this._redirectr = {};
   }
 
   ngOnInit() {
-    // this._route.params
-    //   .map((params: any) => params.id)
-    //   .flatMap((id: string) => this._id = id)
-    //   .subscribe();
     this._route.params
-      .map((params: any) => this._redirectrService.fetchOne(params['id']))
+      .flatMap(params => this._redirectrService.fetchOne(params['id']))
       .subscribe((redirectr: any) => this._redirectr = redirectr);
-    // this._redirectr = REDIRECTRS.find((redirectr: any) => redirectr.id.toString() === this._id);
   }
 
   get redirectr(): any {
@@ -37,9 +29,5 @@ export class RedirectrComponent implements OnInit {
 
   set redirectr(value: any) {
     this._redirectr = value;
-  }
-
-  get id(): string {
-    return this._id;
   }
 }
