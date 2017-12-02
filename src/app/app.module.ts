@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -15,6 +14,7 @@ import { CardComponent, ListComponent } from './shared/preview/preview.component
 import { RedirectrComponent } from './redirectr/redirectr.component';
 import { AboutComponent } from './about/about.component';
 import { LinkComponent } from './link/link.component';
+import { RedirectrService } from './shared/redirectr-service/redirectr.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +31,10 @@ import { LinkComponent } from './link/link.component';
     MatToolbarModule,
     MatListModule,
     MatIconModule,
+    HttpClientModule,
     APP_ROUTES
   ],
-  providers: [],
+  providers: [RedirectrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
