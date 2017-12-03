@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PreviewComponent } from '../preview.component';
 import { RedirectrService } from '../../redirectr-service/redirectr.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'redirectr-redirectr-view',
@@ -9,13 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./redirectr-view.component.css']
 })
 export class RedirectrViewComponent extends PreviewComponent implements OnInit {
-
   static _string_limit = 600;
   private _see: boolean;
+  private _newLink: string;
+  private _alredyFocused: boolean;
 
-  constructor(private _redirectrService: RedirectrService, private _router: Router) {
+  constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog) {
     super();
     this._see = false;
+    this._newLink = 'Il n\'y a aucun lien de redirection ici, ajoutez-en un !';
+    this._alredyFocused = false;
   }
 
   ngOnInit() {}
@@ -67,4 +71,44 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
       .subscribe(_ => this._router.navigate(['/home']));
   }
 
+  get redirectr(): any {
+    return this._redirectr;
+  }
+
+  @Input()
+  set redirectr(value: any) {
+    this._redirectr = value;
+    if (this._redirectr.main_link >= 0) {
+      this._newLink = 'Ajoutez un lien de backup !';
+    }
+  }
+
+  get newLink(): string {
+    return this._newLink;
+  }
+
+  set newLink(value: string) {
+    this._newLink = value;
+  }
+
+  focusFunction() {
+    if (!this._alredyFocused) {
+      this._alredyFocused = true;
+      this._newLink = '';
+    }
+  }
+
+  addLink() {
+    const regexURL = /^(http|https):\/\/[^ "]+$/;
+    if (regexURL.test(this._newLink)) {
+      if (!(this._redirectr.main_link >= 0)) {
+        this._redirectr.main_link = 0;
+      }
+      this._redirectr.links.push(this._newLink);
+
+      this._redirectrService.update(this._redirectr)
+        .subscribe((redirectr: any) => this._redirectr = redirectr);
+    }
+    this._newLink = '';
+  }
 }

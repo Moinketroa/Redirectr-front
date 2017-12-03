@@ -80,12 +80,9 @@
   </div>
 
   <mat-list-item>
-    <div class="left" *ngIf="!(redirectr.main_link >= 0)">
-      Il n'y a aucun lien de redirection ici, ajoutez-en un !
-    </div>
-    <div class="left" *ngIf="redirectr.main_link >= 0">
-      Ajoutez un lien de backup !
-    </div>
+    <input class="left" type="text" name="newLink" [(ngModel)]="newLink"
+      (focus)="focusFunction()"
+    />
 
     <div class="center"></div>
 
@@ -95,7 +92,7 @@
         <span class="material-icons regular">
           add
         </span>
-        <span class="material-icons hov">
+        <span class="material-icons hov" (click)="addLink()">
           add_circle
         </span>
       </span>

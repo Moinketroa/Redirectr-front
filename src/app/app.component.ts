@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   private _query: string;
+  private _alredyFocused: boolean;
 
   constructor() {
-    this._query = '';
+    this._query = 'Saisir des mots-clés ici...';
+    this._alredyFocused = false;
   }
 
   get query(): string {
@@ -21,5 +23,11 @@ export class AppComponent {
     this._query = value;
   }
 
+  focusFunction() {
+    if (!this._alredyFocused) {
+      this._alredyFocused = true;
+      this._query = '';
+    }
+  }
 }
 

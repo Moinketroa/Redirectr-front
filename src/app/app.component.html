@@ -10,7 +10,8 @@
 
     <div class="inside_menu" id="inside_menu_center">
         <div class="searchFormula">
-          <input class="searchbar" type="text" value="" name="query" [(ngModel)]="query"/>
+          <input class="searchbar" type="text" name="query" [(ngModel)]="query"
+                 (focus)="focusFunction()"/>
           <button class="searchButton" [routerLink]="['/search', query]">Rechercher</button>
         </div>
     </div>

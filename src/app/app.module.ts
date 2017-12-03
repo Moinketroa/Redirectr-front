@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Material Design Imports
-import { MatButtonModule, MatIconModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatDialogModule, MatIconModule, MatListModule, MatToolbarModule } from '@angular/material';
 
 import { APP_ROUTES } from './app.routes';
 
@@ -35,6 +35,7 @@ import { RedirectrViewComponent } from './shared/preview/redirectr-view/redirect
   imports: [
     BrowserModule,
     MatToolbarModule,
+    MatDialogModule,
     MatListModule,
     MatIconModule,
     MatButtonModule,
