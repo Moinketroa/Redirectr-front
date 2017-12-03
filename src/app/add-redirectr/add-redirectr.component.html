@@ -7,26 +7,67 @@
 
   <div class="new_redirectr">
 
-    <div class="inside_new_redirectr">
-      Titre : <textarea name="title" id="title"></textarea>
-    </div>
+    <mat-dialog-content>
+      <form novalidate [formGroup]="form">
 
-    <div class="separation_line"></div>
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <div class="inside_new_redirectr">
+                <mat-form-field class="full-width" [class.mgb15]="form.get('title').dirty && form.get('title').invalid">
+                  Titre : <textarea matInput placeholder="First name" formControlName="title" minlength="2" required name="firstname" id="title"></textarea>
+                  <mat-error *ngIf="form.get('title').dirty && form.get('title').hasError('required')" class="error">
+                    Le titre de votre Redirectr est <strong>obligatoire</strong>.
+                  </mat-error>
+                  <mat-error *ngIf="form.get('title').dirty && form.get('title').hasError('minlength')" class="error">
+                    Le titre de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
+                  </mat-error>
+                </mat-form-field>
+              </div>
 
-    <div class="inside_new_redirectr">
-      Description : <textarea name="description" id="description"></textarea>
-    </div>
+              <div class="separation_line"></div>
 
-    <div class="separation_line"></div>
+              <div class="inside_new_redirectr">
+                <mat-form-field class="full-width" [class.mgb15]="form.get('description').dirty && form.get('description').invalid">
+                  Description : <textarea matInput placeholder="First name" formControlName="description" minlength="2" required name="description" id="description"></textarea>
+                  <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('required')" class="error">
+                    Le description de votre Redirectr est <strong>obligatoire</strong>.
+                  </mat-error>
+                  <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('minlength')" class="error">
+                    Le titre de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
+                  </mat-error>
+                </mat-form-field>
+              </div>
 
-    <div class="inside_new_redirectr">
-      Lien de redirection : <textarea name="main_link" id="main_link"></textarea>
-    </div>
+              <div class="separation_line"></div>
+
+              <div class="inside_new_redirectr">
+                <mat-form-field class="full-width" [class.mgb15]="form.get('main_link').dirty && form.get('main_link').invalid">
+                  Lien de redirection : <textarea matInput placeholder="First name" formControlName="main_link" minlength="2" required name="main_link" id="main_link"></textarea>
+                  <mat-error *ngIf="form.get('main_link').dirty && form.get('main_link').hasError('required')" class="error">
+                    Le lien de redirection de votre Redirectr est <strong>obligatoire</strong>.
+                  </mat-error>
+                  <mat-error *ngIf="form.get('main_link').dirty && form.get('main_link').hasError('minlength')" class="error">
+                    Le lien de redirection de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+
+      </form>
+    </mat-dialog-content>
 
     <div class="inside_new_redirectr" id="add">
-      <button class="addButton">Ajouter</button>
+      <mat-dialog-actions align="end">
+        <button mat-button color="primary" type="submit" (click)="submit(form.value)" [disabled]="form.invalid" class="addButton">Ajouter</button>
+      </mat-dialog-actions>
     </div>
 
   </div>
 
 </div>
+
+<div class="blanck"></div>

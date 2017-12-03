@@ -60,6 +60,7 @@
     background-color: white;
     color: black;
     border: 2px solid #e7e7e7;
+    margin-top: 20px;
 }
 
 .addButton:hover{
@@ -67,7 +68,7 @@
 }
 
 #title{
-    width: 100%;
+    width: 59vw;
     margin-top: 10px;
     padding-top: 10px;
     padding-left: 10px;
@@ -89,7 +90,7 @@
 }
 
 #description{
-    width: 100%;
+    width: 59vw;
     height: 150px;
     margin-top: 10px;
     padding-left: 10px;
@@ -112,7 +113,7 @@
 }
 
 #main_link{
-    width: 100%;
+    width: 59vw;
     margin-top: 10px;
     padding-left: 10px;
     padding-top: 10px;
@@ -131,4 +132,16 @@
 
 #main_link:focus {
     border: 2px solid #0d47a1;
+}
+
+.blanck{
+    padding-bottom: 400px;
+}
+
+mat-dialog-content{
+    width: 100%;
+}
+
+.error{
+    color: red;
 }

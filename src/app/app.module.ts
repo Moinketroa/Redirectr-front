@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Material Design Imports
 import { MatIconModule, MatListModule, MatToolbarModule } from '@angular/material';
@@ -34,6 +34,8 @@ import { AddRedirectrComponent } from './add-redirectr/add-redirectr.component';
     MatListModule,
     MatIconModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     APP_ROUTES
   ],
   providers: [RedirectrService],
