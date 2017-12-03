@@ -1,0 +1,31 @@
+<div class="component_search">
+
+  <div class="title">
+    Resultat de la recherche
+  </div>
+
+  <div [ngSwitch]="view">
+    <div *ngSwitchCase="'card'" class="card_redirectr_container">
+      <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of results">
+        <div class="inside_top_redirectr_container">
+          <redirectr-card [redirectr]="redirectr"></redirectr-card>
+        </div>
+      </a>
+    </div>
+
+    <div *ngSwitchCase="'list'" class="list_redirectr_container">
+      <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of results">
+        <redirectr-list [redirectr]="redirectr"></redirectr-list>
+      </a>
+    </div>
+  </div>
+
+
+  <div>
+    <button (click)="switchView()" mat-fab class="buttons-fab" color="primary">
+      <i class="material-icons" *ngIf="view === 'card'">view_headline</i>
+      <i class="material-icons" *ngIf="view === 'list'" >view_module</i>
+    </button>
+  </div>
+</div>
+

@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Material Design Imports
-import { MatIconModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatListModule, MatToolbarModule } from '@angular/material';
 
 import { APP_ROUTES } from './app.routes';
 
@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { LinkComponent } from './link/link.component';
 import { RedirectrService } from './shared/redirectr-service/redirectr.service';
 import { AddRedirectrComponent } from './add-redirectr/add-redirectr.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { AddRedirectrComponent } from './add-redirectr/add-redirectr.component';
     RedirectrComponent,
     AboutComponent,
     LinkComponent,
-    AddRedirectrComponent
+    AddRedirectrComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     MatToolbarModule,
     MatListModule,
     MatIconModule,
+    MatButtonModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

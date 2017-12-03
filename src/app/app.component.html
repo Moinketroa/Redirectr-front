@@ -9,12 +9,10 @@
     </div>
 
     <div class="inside_menu" id="inside_menu_center">
-      <form action="" class="formulaire">
         <div class="searchFormula">
-          <input class="searchbar" type="text" value="Saisir un titre ici..."/>
-          <button (click)="search()" class="searchButton">Rechercher</button>
+          <input class="searchbar" type="text" value="" name="query" [(ngModel)]="query"/>
+          <button class="searchButton" [routerLink]="['/search', query]">Rechercher</button>
         </div>
-      </form>
     </div>
 
     <div class="inside_menu" id="inside_menu_right">

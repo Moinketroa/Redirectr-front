@@ -7,5 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  private _query: string;
+
+  constructor() {
+    this._query = '';
+  }
+
+  get query(): string {
+    return this._query;
+  }
+
+  set query(value: string) {
+    this._query = value;
+  }
+
 }
 

@@ -42,7 +42,7 @@ export class RedirectrService {
   }
 
   search(tags: string): Observable<any[]> {
-    return this._http.get(this._backendURL.searchRedirectrs.replace(':tags', tags), this._options())
+    return this._http.get(this._backendURL.searchRedirectrs.replace(':tags', tags.replace(' ', '+')), this._options())
       .filter((_: any) => !!_)
       .defaultIfEmpty([]);
   }
