@@ -5,6 +5,7 @@ import {HomeComponent} from './home/home.component';
 import { RedirectrComponent } from './redirectr/redirectr.component';
 import {AboutComponent} from './about/about.component';
 import { LinkComponent } from './link/link.component';
+import {AddRedirectrComponent} from './add-redirectr/add-redirectr.component';
 
 
 const ROUTES: Routes = [
@@ -13,6 +14,7 @@ const ROUTES: Routes = [
   { path: 'redirectr/:id', component: RedirectrComponent },
   { path: 'link/:id', component: LinkComponent},
   { path: 'aboutUs', component: AboutComponent },
+    { path: 'addRedirectr', component: AddRedirectrComponent },
 ];
 
 export const APP_ROUTES = RouterModule.forRoot(ROUTES, { useHash: true });

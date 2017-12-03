@@ -15,6 +15,7 @@ import { RedirectrComponent } from './redirectr/redirectr.component';
 import { AboutComponent } from './about/about.component';
 import { LinkComponent } from './link/link.component';
 import { RedirectrService } from './shared/redirectr-service/redirectr.service';
+import { AddRedirectrComponent } from './add-redirectr/add-redirectr.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RedirectrService } from './shared/redirectr-service/redirectr.service';
     ListComponent,
     RedirectrComponent,
     AboutComponent,
-    LinkComponent
+    LinkComponent,
+    AddRedirectrComponent
   ],
   imports: [
     BrowserModule,

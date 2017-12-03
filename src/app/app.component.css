@@ -45,7 +45,7 @@ mat-toolbar .inside_menu{
 mat-toolbar #inside_menu_right{
   text-align: right;
   margin-right: 20px;
-  margin-top: -15px;
+  margin-top: 16px;
 }
 
 mat-toolbar a {
