@@ -23,6 +23,7 @@
   -moz-filter: drop-shadow(0 0px 3px black);
   -o-filter: drop-shadow(0 0px 3px black);
   filter: drop-shadow(0 0px 3px black);
+  animation: rotate 1500ms;
 }
 
 .container_about_us{
