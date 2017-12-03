@@ -14,12 +14,16 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   private _see: boolean;
   private _newLink: string;
   private _alredyFocused: boolean;
+  private _editing: boolean[];
+  private _alreadyEditing: boolean;
 
   constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog) {
     super();
     this._see = false;
     this._newLink = 'Il n\'y a aucun lien de redirection ici, ajoutez-en un !';
     this._alredyFocused = false;
+    this._editing = [];
+    this._alreadyEditing = false;
   }
 
   ngOnInit() {}
