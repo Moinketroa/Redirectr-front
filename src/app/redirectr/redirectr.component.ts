@@ -10,11 +10,13 @@ import { RedirectrService } from '../shared/redirectr-service/redirectr.service'
   styleUrls: ['./redirectr.component.css']
 })
 export class RedirectrComponent implements OnInit {
-
+  static _string_limit = 600;
   private _redirectr: any;
+  private _see: boolean;
 
   constructor(private _redirectrService: RedirectrService, private _route: ActivatedRoute) {
     this._redirectr = {};
+    this._see = false;
   }
 
   ngOnInit() {
@@ -30,6 +32,30 @@ export class RedirectrComponent implements OnInit {
   @Input()
   set redirectr(value: any) {
     this._redirectr = value;
+  }
+
+  get description(): string {
+
+    return (
+      this._redirectr.description.length < RedirectrComponent._string_limit
+        ? this._redirectr.description
+        : (this._see
+          ? this._redirectr.description
+          : this._redirectr.description.substr(0, RedirectrComponent._string_limit) + '...')
+    );
+  }
+
+  get see(): string{
+    return (this._redirectr.description.length < RedirectrComponent._string_limit
+      ? ''
+      : (this._see
+        ? 'Voir moins.'
+        : 'Voir plus...')
+    );
+  }
+
+  changeSee() {
+    this._see = !this._see;
   }
 
   changeMainLink(index: number) {
