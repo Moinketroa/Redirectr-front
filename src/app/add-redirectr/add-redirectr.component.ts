@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder,
     Validators,ReactiveFormsModule, FormControl  } from '@angular/forms';
+import {RedirectrService} from '../shared/redirectr-service/redirectr.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'redirectr-add-redirectr',
@@ -14,11 +16,13 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
     private _submit$: EventEmitter<any>;
     // private property to store form value
     private _form: FormGroup;
+    private _redirectr: any;
 
     /**
      * Component constructor
      */
-    constructor() {
+    constructor(private _redirectrService: RedirectrService, private _route: ActivatedRoute, private _router: Router) {
+        this._redirectr = {};
         this._submit$ = new EventEmitter();
         this._form = this._buildForm();
     }
@@ -56,6 +60,11 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
      * OnInit implementation
      */
     ngOnInit() {
+        this._route.params
+        .flatMap(params => this._redirectrService.create(this._redirectr)
+        .subscribe((redirectr: any) => redirectr === {}
+            ? this._router.navigate(['/404'])
+            : this._redirectr = redirectr))
     }
 
     /**
@@ -68,10 +77,10 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
     }
 
     /**
-     * Function to emit event to submit form and person
+     * Function to emit event to submit form and redirectr
      */
-    submit(person: any) {
-        this._submit$.emit(person);
+    submit(redirectr: any) {
+        this._submit$.emit(redirectr);
     }
 
     /**
