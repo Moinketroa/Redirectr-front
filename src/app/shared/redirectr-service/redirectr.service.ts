@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/defaultIfEmpty';
 import 'rxjs/add/operator/filter';
-import { Console } from '@angular/core/src/console';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/operator/retry';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class RedirectrService {
   // private property to store all backend URLs
   private _backendURL: any;
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, private _router: Router) {
     this._backendURL = {};
 
     // build backend base url
@@ -33,8 +36,8 @@ export class RedirectrService {
 
   fetchOne(id: string): Observable<any> {
     return this._http.get(this._backendURL.oneRedirectrs.replace(':id', id), this._options())
-      .filter(_ => !!_)
-      .defaultIfEmpty({});
+      .retry(3)                                         // optionally add the retry
+      .catch((err: HttpErrorResponse) => this._redirectionError(err));
   }
 
   fetchTop3(): Observable<any[]> {
@@ -90,5 +93,20 @@ export class RedirectrService {
     let redirectr_res: any = this._condensedVersion(redirectr);
     redirectr_res.clicks = redirectr.clicks;
     return redirectr_res;
+  }
+
+  private _redirectionError(err: any): Observable<any> {
+    if (err.error instanceof Error) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', err.error.message);
+    } else {
+      this._router.navigate(['/'.concat(err.status)]);
+    }
+
+    // ...optionally return a default fallback value so app can continue (pick one)
+    // which could be a default value
+    // return Observable.of({my: "default value..."});
+    // or simply an empty observable
+    return Observable.empty();
   }
 }

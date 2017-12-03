@@ -61,7 +61,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="57" />
-              <folding />
+              <folding>
+                <marker date="1512335715000" expanded="true" signature="881:915" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +71,8 @@
       <file leaf-file-name="redirectr.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/shared/redirectr-service/redirectr.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="8" />
+            <state relative-caret-position="443">
+              <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -266,12 +268,12 @@
       <workItem from="1512315504695" duration="33000" />
       <workItem from="1512315618514" duration="349000" />
       <workItem from="1512325552058" duration="211000" />
-      <workItem from="1512332525529" duration="2636000" />
+      <workItem from="1512332525529" duration="2758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13185000" />
+    <option name="totallyTimeSpent" value="13307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -663,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/shared/redirectr-service/redirectr.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="443">
+          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -705,7 +707,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="57" />
-          <folding />
+          <folding>
+            <marker date="1512335715000" expanded="true" signature="881:915" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

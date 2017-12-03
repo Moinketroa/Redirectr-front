@@ -178,3 +178,11 @@ mat-list {
   bottom: 90px;
   right: 20px;
 }
+
+.edit:hover {
+  color: #0d47a1;
+}
+
+.edit {
+  color: #757575;
+}
