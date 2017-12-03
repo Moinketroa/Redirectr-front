@@ -32,7 +32,9 @@ export class RedirectrService {
   }
 
   fetchOne(id: string): Observable<any> {
-    return this._http.get(this._backendURL.oneRedirectrs.replace(':id', id), this._options());
+    return this._http.get(this._backendURL.oneRedirectrs.replace(':id', id), this._options())
+      .filter(_ => !!_)
+      .defaultIfEmpty({});
   }
 
   fetchTop3(): Observable<any[]> {
