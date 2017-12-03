@@ -3,6 +3,7 @@ import { FormGroup, FormArray, FormBuilder,
     Validators,ReactiveFormsModule, FormControl  } from '@angular/forms';
 import {RedirectrService} from '../shared/redirectr-service/redirectr.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'redirectr-add-redirectr',
@@ -10,8 +11,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./add-redirectr.component.css']
 })
 export class AddRedirectrComponent implements OnInit, OnChanges {
-    // private property to store model value
-    private _model: any;
     // private property to store submit$ value
     private _submit$: EventEmitter<any>;
     // private property to store form value
@@ -25,16 +24,6 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
         this._redirectr = {};
         this._submit$ = new EventEmitter();
         this._form = this._buildForm();
-    }
-
-
-    /**
-     * Returns private property _model
-     *
-     * @returns {any}
-     */
-    get model(): any {
-        return this._model;
     }
 
     /**
@@ -60,11 +49,7 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
      * OnInit implementation
      */
     ngOnInit() {
-        this._route.params
-        .flatMap(params => this._redirectrService.create(this._redirectr)
-        .subscribe((redirectr: any) => redirectr === {}
-            ? this._router.navigate(['/404'])
-            : this._redirectr = redirectr))
+
     }
 
     /**
@@ -79,8 +64,15 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
     /**
      * Function to emit event to submit form and redirectr
      */
-    submit(redirectr: any) {
-        this._submit$.emit(redirectr);
+    submit(redirectr: any){
+        this._redirectr = redirectr
+        this._redirectrService
+            .create(this._redirectr )
+            .flatMap(_ => this._redirectrService.fetch());
+
+        console.log(this._redirectr )
+
+        this._router.navigate(['/'])
     }
 
     /**
