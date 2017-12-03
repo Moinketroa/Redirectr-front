@@ -162,3 +162,10 @@ mat-list {
 .right-icon-change:hover .regular{
   display: none;
 }
+
+.buttons-fab {
+  display: block;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+}

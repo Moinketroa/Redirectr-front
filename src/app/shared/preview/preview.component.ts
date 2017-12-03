@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
-class PreviewComponent implements OnInit {
+export class PreviewComponent implements OnInit {
 
   // private property to store a redirectr
   private _path: string;

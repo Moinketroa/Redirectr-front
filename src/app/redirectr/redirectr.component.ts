@@ -14,7 +14,7 @@ export class RedirectrComponent implements OnInit {
   private _redirectr: any;
   private _see: boolean;
 
-  constructor(private _redirectrService: RedirectrService, private _route: ActivatedRoute) {
+  constructor(private _redirectrService: RedirectrService, private _route: ActivatedRoute, private _router: Router) {
     this._redirectr = {};
     this._see = false;
   }
@@ -67,7 +67,7 @@ export class RedirectrComponent implements OnInit {
   reportLink(index: number) {
     this._redirectr.links.splice(index, 1);
 
-    if (this._redirectr.main_link == index){
+    if (this._redirectr.main_link == index) {
       this._redirectr.main_link = this._redirectr.links.length - 1; // last link is now main_link
     } else if (this._redirectr.main_link > index) {
       this._redirectr.main_link = this._redirectr.main_link - 1; // shifting main_link index
@@ -75,5 +75,10 @@ export class RedirectrComponent implements OnInit {
 
     this._redirectrService.update(this._redirectr)
       .subscribe((redirectr: any) => this._redirectr = redirectr);
+  }
+
+  deleteRedirectr(redirectr: any) {
+    this._redirectrService.delete(this._redirectr.id)
+      .subscribe(_ => this._router.navigate(['/home']));
   }
 }

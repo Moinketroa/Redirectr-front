@@ -17,6 +17,7 @@ import { LinkComponent } from './link/link.component';
 import { RedirectrService } from './shared/redirectr-service/redirectr.service';
 import { AddRedirectrComponent } from './add-redirectr/add-redirectr.component';
 import { SearchComponent } from './search/search.component';
+import { RedirectrViewComponent } from './shared/preview/redirectr-view/redirectr-view.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchComponent } from './search/search.component';
     AboutComponent,
     LinkComponent,
     AddRedirectrComponent,
-    SearchComponent
+    SearchComponent,
+    RedirectrViewComponent
   ],
   imports: [
     BrowserModule,
