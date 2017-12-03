@@ -16,6 +16,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   private _alredyFocused: boolean;
   private _editing: boolean[];
   private _alreadyEditing: boolean;
+  private _modifyLink: string;
 
   constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog) {
     super();
@@ -24,6 +25,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
     this._alredyFocused = false;
     this._editing = [];
     this._alreadyEditing = false;
+    this._modifyLink = '';
   }
 
   ngOnInit() {}
@@ -84,6 +86,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
     this._redirectr = value;
     if (this._redirectr.main_link >= 0) {
       this._newLink = 'Ajoutez un lien de backup !';
+      this._redirectr.links.forEach(_ => this._editing.push(false));
     }
   }
 
@@ -114,5 +117,32 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
         .subscribe((redirectr: any) => this._redirectr = redirectr);
     }
     this._newLink = '';
+  }
+
+  get alreadyEditing(): boolean {
+    return this._alreadyEditing;
+  }
+
+  editing(index: number): boolean {
+    return this._editing[index];
+  }
+
+  editLink(index: number) {
+    if (!this._alreadyEditing) {
+      this._alreadyEditing = true;
+      this._editing[index] = true;
+      this._modifyLink = this._redirectr.links[index];
+    } else if (this._editing[index] = true) {
+      this._alreadyEditing = false;
+      this._editing[index] = false;
+    }
+  }
+
+  get modifyLink(): string {
+    return this._modifyLink;
+  }
+
+  set modifyLink(value: string) {
+    this._modifyLink = value;
   }
 }
