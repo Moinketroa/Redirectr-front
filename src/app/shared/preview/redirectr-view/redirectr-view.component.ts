@@ -128,13 +128,23 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   }
 
   editLink(index: number) {
+    const regexURL = /^(http|https):\/\/[^ "]+$/;
+
     if (!this._alreadyEditing) {
       this._alreadyEditing = true;
       this._editing[index] = true;
       this._modifyLink = this._redirectr.links[index];
     } else if (this._editing[index] = true) {
-      this._alreadyEditing = false;
-      this._editing[index] = false;
+
+
+      if (regexURL.test(this._modifyLink) {
+        this._redirectr.links[index] = this._modifyLink;
+        this._alreadyEditing = false;
+        this._editing[index] = false;
+
+        this._redirectrService.update(this._redirectr)
+          .subscribe((redirectr: any) => this._redirectr = redirectr);
+      }
     }
   }
 

@@ -30,9 +30,11 @@
 <mat-list>
   <div *ngFor="let link of redirectr.links; let i = index">
     <mat-list-item *ngIf="redirectr.main_link === i">
-      <a class="left" href="{{ link }}" *ngIf="!(editing(i))">
+      <a class="left" href="{{ link }}" *ngIf="!(editing(redirectr.main_link))">
         {{ link }}
       </a>
+
+      <input class="modify" type="text" name="modifyLink" [(ngModel)]="modifyLink" *ngIf="(editing(redirectr.main_link))"/>
 
       <div class="center"></div>
 
@@ -66,7 +68,7 @@
         {{ link }}
       </a>
 
-      <input class="editLink" type="text" name="modifyLink" [(ngModel)]="modifyLink"/>
+      <input class="modify" type="text" name="modifyLink" [(ngModel)]="modifyLink" *ngIf="(editing(i))"/>
 
       <div class="center"></div>
 
@@ -102,7 +104,7 @@
   </div>
 
   <mat-list-item>
-    <input class="left" type="text" name="newLink" [(ngModel)]="newLink"
+    <input class="add" type="text" name="newLink" [(ngModel)]="newLink"
       (focus)="focusFunction()"
     />
 
