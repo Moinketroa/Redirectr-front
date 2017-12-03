@@ -7,6 +7,7 @@ import {AboutComponent} from './about/about.component';
 import { LinkComponent } from './link/link.component';
 import {AddRedirectrComponent} from './add-redirectr/add-redirectr.component';
 import { SearchComponent } from './search/search.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 
 const ROUTES: Routes = [
@@ -16,7 +17,9 @@ const ROUTES: Routes = [
   { path: 'link/:id', component: LinkComponent },
   { path: 'aboutUs', component: AboutComponent },
   { path: 'addRedirectr', component: AddRedirectrComponent },
-  { path: 'search/:tags', component: SearchComponent }
+  { path: 'search/:tags', component: SearchComponent },
+  { path: '404', component: NotFoundComponent },
+  {path: '**', component: HomeComponent }
 ];
 
 export const APP_ROUTES = RouterModule.forRoot(ROUTES, { useHash: true });

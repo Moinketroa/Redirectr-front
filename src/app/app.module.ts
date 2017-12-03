@@ -18,6 +18,7 @@ import { RedirectrService } from './shared/redirectr-service/redirectr.service';
 import { AddRedirectrComponent } from './add-redirectr/add-redirectr.component';
 import { SearchComponent } from './search/search.component';
 import { RedirectrViewComponent } from './shared/preview/redirectr-view/redirectr-view.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RedirectrViewComponent } from './shared/preview/redirectr-view/redirect
     LinkComponent,
     AddRedirectrComponent,
     SearchComponent,
-    RedirectrViewComponent
+    RedirectrViewComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
