@@ -8,7 +8,7 @@ export class PreviewComponent implements OnInit {
 
   // private property to store a redirectr
   private _path: string;
-  private _redirectr: any;
+  protected _redirectr: any;
 
 
   /**

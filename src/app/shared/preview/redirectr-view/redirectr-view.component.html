@@ -1,3 +1,108 @@
-<p>
-  redirectr-view works!
-</p>
+<div class="mat-redirect-content">
+
+  <div class="mat-redirect-title">
+    {{ redirectr.title }}
+  </div>
+
+  <div class="mat-redirectr-link">
+    <a [routerLink]="['/link', redirectr.id]">
+      localhost:4242/#/link/{{ redirectr.id }}
+    </a>
+  </div>
+
+  <div class="mat-redirect-description">
+    <div class="mat-description-title">
+      Description :
+    </div>
+
+    <div class="mat-description-p">
+      {{ description }}
+      <a (click)="changeSee()"><span style="font-weight: bold">{{ see }}</span></a>
+    </div>
+
+  </div>
+</div>
+
+<div class="mat-redirect-title">
+  Liens de redirections
+</div>
+
+<mat-list>
+  <div *ngFor="let link of redirectr.links; let i = index">
+    <mat-list-item *ngIf="redirectr.main_link === i">
+      <a class="left" href="{{ link }}">
+        {{ link }}
+      </a>
+
+      <div class="center"></div>
+
+      <div class="right">
+        <span class="report" style="color:#EF5350" (click)="reportLink(i)">
+          <span class="material-icons regular">
+            error_outline
+          </span>
+          <span class="material-icons hov">
+            error
+          </span>
+        </span>
+        <span class="material-icons">star</span>
+      </div>
+    </mat-list-item>
+  </div>
+
+  <div *ngFor="let link of redirectr.links; let i = index">
+    <mat-list-item *ngIf="redirectr.main_link != i">
+      <a class="left" href="{{ link }}">
+        {{ link }}
+      </a>
+
+      <div class="center"></div>
+
+      <div class="right">
+        <span class="report" style="color:#EF5350" (click)="reportLink(i)">
+          <span class="material-icons regular">
+            error_outline
+          </span>
+          <span class="material-icons hov">
+            error
+          </span>
+        </span>
+        <span class="right-icon-change" (click)="changeMainLink(i)">
+          <span class="material-icons regular">
+            star_border
+          </span>
+          <span class="material-icons hov">
+            star
+          </span>
+        </span>
+      </div>
+    </mat-list-item>
+  </div>
+
+  <mat-list-item>
+    <div class="left" *ngIf="!(redirectr.main_link >= 0)">
+      Il n'y a aucun lien de redirection ici, ajoutez-en un !
+    </div>
+    <div class="left" *ngIf="redirectr.main_link >= 0">
+      Ajoutez un lien de backup !
+    </div>
+
+    <div class="center"></div>
+
+    <div class="right">
+
+      <span class="right-icon-change">
+        <span class="material-icons regular">
+          add
+        </span>
+        <span class="material-icons hov">
+          add_circle
+        </span>
+      </span>
+    </div>
+  </mat-list-item>
+</mat-list>
+
+<button (click)="deleteRedirectr(redirectr)" mat-fab class="buttons-fab" color="primary">
+  <i class="material-icons">delete</i>
+</button>
