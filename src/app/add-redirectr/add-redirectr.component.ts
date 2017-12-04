@@ -64,13 +64,15 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
     /**
      * Function to emit event to submit form and redirectr
      */
-    submit(redirectr: any){
-        this._redirectr = redirectr
+    submit(redirectr: any) {
+        this._redirectr = redirectr;
+        this._redirectr.clicks = 0;
         this._redirectrService
-            .create(this._redirectr )
-            .flatMap(_ => this._redirectrService.fetch());
+            .create(this._redirectr)
+            .flatMap(_ => this._redirectrService.fetch())
+            .subscribe((redirectr: any) => this._redirectr = redirectr);
 
-        console.log(this._redirectr )
+        console.log(this._redirectr)
 
         this._router.navigate(['/'])
     }
