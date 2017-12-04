@@ -66,7 +66,10 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
      */
     submit(redirectr: any) {
         this._redirectr = redirectr;
-        this._redirectr.clicks = 0;
+        this._redirectr.links = [this._redirectr.main_link];
+        this._redirectr.main_link = 0;
+        delete(this._redirectr.id);
+
         this._redirectrService
             .create(this._redirectr)
             .flatMap(_ => this._redirectrService.fetch())

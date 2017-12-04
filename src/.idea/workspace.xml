@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="900">
-              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <caret line="60" column="25" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file leaf-file-name="add-redirectr.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+            <state relative-caret-position="343">
+              <caret line="70" column="35" lean-forward="true" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
               <folding>
                 <element signature="e#0#90#0" expanded="true" />
               </folding>
@@ -166,8 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,6 +262,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,11 +301,12 @@
       <workItem from="1512332525529" duration="6812000" />
       <workItem from="1512375186342" duration="922000" />
       <workItem from="1512386142357" duration="800000" />
+      <workItem from="1512388666655" duration="929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19083000" />
+    <option name="totallyTimeSpent" value="20012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -718,15 +719,15 @@
     <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
-          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <caret line="60" column="25" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        <state relative-caret-position="343">
+          <caret line="70" column="35" lean-forward="true" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
           <folding>
             <element signature="e#0#90#0" expanded="true" />
           </folding>
