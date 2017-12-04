@@ -1,7 +1,5 @@
-import { Component, ElementRef, OnInit, Renderer, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { REDIRECTRS } from '../_static/redirectrs';
-import { main } from '@angular/compiler-cli/src/main';
 import { RedirectrService } from '../shared/redirectr-service/redirectr.service';
 
 @Component({
