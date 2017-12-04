@@ -38,3 +38,9 @@
   padding-right: 15px;
   padding-top: 10px;
 }
+
+.link {
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
+}

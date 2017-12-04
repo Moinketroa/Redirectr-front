@@ -26,7 +26,7 @@ export class LinkComponent implements OnInit {
   ngOnInit() {
     this._route.params
       .flatMap(params => this._redirectrService.fetchOne(params['id']))
-      .subscribe((redirectr: any) => { redirectr === {} ? this._router.navigate(['/404']) : this._redirectr = redirectr;
+      .subscribe((redirectr: any) => { this._redirectr = redirectr;
         this._mainIndex = redirectr.main_link;
         if (this._mainIndex >= 0) {
           this._mainLink = redirectr.links[this._mainIndex];
@@ -49,5 +49,17 @@ export class LinkComponent implements OnInit {
 
   get link(): string {
     return this._mainLink;
+  }
+
+  reportMainLink() {
+    this._redirectr.links.splice(this._mainIndex, 1);
+
+    this._redirectr.main_link = this._redirectr.links.length - 1; // last link is now main_link
+
+    this._redirectrService.update(this._redirectr)
+      .subscribe((redirectr: any) => {
+        this._redirectr = redirectr;
+        this._router.navigate(['/redirectr', redirectr.id]);
+      });
   }
 }
