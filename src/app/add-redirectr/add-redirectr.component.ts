@@ -16,6 +16,7 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
     // private property to store form value
     private _form: FormGroup;
     private _redirectr: any;
+    private _newID: any;
 
     /**
      * Component constructor
@@ -73,11 +74,13 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
         this._redirectrService
             .create(this._redirectr)
             .flatMap(_ => this._redirectrService.fetch())
-            .subscribe((redirectr: any) => this._redirectr = redirectr);
+            .subscribe((redirectr: any) => this._newID = redirectr.id);
 
-        console.log(this._redirectr)
+        console.log(this._newID);
 
-        this._router.navigate(['/'])
+        //ici redirection vers le nouveau redirectr
+        this._router.navigate(['/redirectr/'+this._newID]);
+
     }
 
     /**

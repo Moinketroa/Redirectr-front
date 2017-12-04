@@ -8,12 +8,14 @@ import { LinkComponent } from './link/link.component';
 import {AddRedirectrComponent} from './add-redirectr/add-redirectr.component';
 import { SearchComponent } from './search/search.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {UpdateComponent} from './update/update.component';
 
 
 const ROUTES: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'redirectr/:id', component: RedirectrComponent },
+    { path: 'update/:id', component: UpdateComponent },
   { path: 'link/:id', component: LinkComponent },
   { path: 'aboutUs', component: AboutComponent },
   { path: 'addRedirectr', component: AddRedirectrComponent },

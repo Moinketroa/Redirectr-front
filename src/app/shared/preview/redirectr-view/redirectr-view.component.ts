@@ -17,6 +17,8 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   private _editing: boolean[];
   private _alreadyEditing: boolean;
   private _modifyLink: string;
+    // private property to store dialogStatus value
+    private _dialogStatus: string;
 
   constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog) {
     super();
@@ -26,6 +28,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
     this._editing = [];
     this._alreadyEditing = false;
     this._modifyLink = '';
+      this._dialogStatus = 'inactive';
   }
 
   ngOnInit() {}
@@ -147,6 +150,14 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
       }
     }
   }
+    /**
+     * Returns private property _dialogStatus
+     *
+     * @returns {string}
+     */
+    get dialogStatus(): string {
+        return this._dialogStatus;
+    }
 
   get modifyLink(): string {
     return this._modifyLink;
@@ -155,4 +166,20 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   set modifyLink(value: string) {
     this._modifyLink = value;
   }
+
+  showDialog() {
+
+      if (this._dialogStatus == 'active') {
+          this._dialogStatus = 'inactive';
+      }else{
+          this._dialogStatus = 'active';
+      }
+
+  }
+
+    updateRedirectr(redirectr: any) {
+        this._redirectrService.fetchOne(this._redirectr.id)
+            .subscribe(_ => this._router.navigate(['/update',this._redirectr.id]));
+    }
+
 }

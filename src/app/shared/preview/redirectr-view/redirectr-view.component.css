@@ -195,3 +195,20 @@ mat-list {
   width: 93%;
   color: #0d47a1;
 }
+
+
+.buttons-fab button {
+  transition: bottom 0.2s;
+}
+
+.buttons-fab:hover .button-add {
+  bottom: 90px;
+}
+
+#delete_button{
+  bottom: 270px;
+}
+
+#add_button{
+  bottom: 180px;
+}
