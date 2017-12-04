@@ -137,7 +137,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
     } else if (this._editing[index] = true) {
 
 
-      if (regexURL.test(this._modifyLink) {
+      if (regexURL.test(this._modifyLink)) {
         this._redirectr.links[index] = this._modifyLink;
         this._alreadyEditing = false;
         this._editing[index] = false;
