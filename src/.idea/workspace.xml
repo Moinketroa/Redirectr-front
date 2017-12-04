@@ -24,12 +24,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-redirectr.component.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add-redirectr.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
-              <folding />
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#90#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/update/update.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
+            <state relative-caret-position="668">
               <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#4;n#td#0;n#tr#0;n#table#0;n#form#0;n#mat-dialog-content#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -138,7 +140,6 @@
         <option value="$PROJECT_DIR$/app/app.component.html" />
         <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.css" />
         <option value="$PROJECT_DIR$/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts" />
         <option value="$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.css" />
         <option value="$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.html" />
         <option value="$PROJECT_DIR$/app/app.routes.ts" />
@@ -148,6 +149,7 @@
         <option value="$PROJECT_DIR$/app/shared/redirectr-service/redirectr.service.ts" />
         <option value="$PROJECT_DIR$/app/update/update.component.ts" />
         <option value="$PROJECT_DIR$/app/update/update.component.html" />
+        <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts" />
       </list>
     </option>
   </component>
@@ -325,12 +327,12 @@
       <workItem from="1512375186342" duration="922000" />
       <workItem from="1512386142357" duration="800000" />
       <workItem from="1512388666655" duration="976000" />
-      <workItem from="1512404300230" duration="10541000" />
+      <workItem from="1512404300230" duration="10630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30600000" />
+    <option name="totallyTimeSpent" value="30689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -385,7 +387,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-          <folding />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -460,7 +464,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-          <folding />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,14 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/shared/redirectr-service/redirectr.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -757,10 +755,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/update/update.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state relative-caret-position="668">
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#4;n#td#0;n#tr#0;n#table#0;n#form#0;n#mat-dialog-content#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
