@@ -53,7 +53,6 @@ export class RedirectrService {
   }
 
   create(redirectr: any): Observable<any> {
-    console.log("create");
     return this._http.post(this._backendURL.allRedirectrs, redirectr, this._options());
   }
 

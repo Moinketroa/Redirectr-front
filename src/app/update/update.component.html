@@ -1,3 +1,64 @@
-<p>
-  Update works
-</p>
+<div class="container_add_redirectr">
+
+  <div class="title_add_redirectr">
+    Modification de {{ redirectr.title }}
+  </div>
+
+  <div class="new_redirectr">
+
+    <mat-dialog-content>
+      <form novalidate [formGroup]="form">
+
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <div class="inside_new_redirectr">
+                <mat-form-field class="full-width" [class.mgb15]="form.get('title').dirty && form.get('title').invalid">
+                  Titre : <textarea value="{{ redirectr.title }}" matInput formControlName="title" minlength="2" required name="title" id="title"></textarea>
+                  <mat-error *ngIf="form.get('title').dirty && form.get('title').hasError('required')" class="error">
+                    Le titre de votre Redirectr est <strong>obligatoire</strong>.
+                  </mat-error>
+                  <mat-error *ngIf="form.get('title').dirty && form.get('title').hasError('minlength')" class="error">
+                    Le titre de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="separation_line"></div>
+
+              <div class="inside_new_redirectr">
+                <mat-form-field class="full-width" [class.mgb15]="form.get('description').dirty && form.get('description').invalid">
+                  Description : <textarea value="{{ redirectr.description }}" matInput formControlName="description" minlength="2" required name="description" id="description"></textarea>
+                  <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('required')" class="error">
+                    Le description de votre Redirectr est <strong>obligatoire</strong>.
+                  </mat-error>
+                  <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('minlength')" class="error">
+                    Le titre de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="separation_line"></div>
+
+              <div class="mat-redirectr-link" style="text-align: center">
+                <a [routerLink]="['/link', redirectr.id]">
+                  localhost:4242/#/link/{{ redirectr.id }}
+                </a>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+
+      </form>
+    </mat-dialog-content>
+
+    <div class="inside_new_redirectr" id="add">
+      <mat-dialog-actions align="end">
+        <button mat-button color="primary" type="submit" (click)="submit(form.value)" class="addButton">Modifier</button>
+      </mat-dialog-actions>
+    </div>
+
+  </div>
+
+</div>

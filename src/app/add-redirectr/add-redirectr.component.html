@@ -15,7 +15,7 @@
             <td>
               <div class="inside_new_redirectr">
                 <mat-form-field class="full-width" [class.mgb15]="form.get('title').dirty && form.get('title').invalid">
-                  Titre : <textarea matInput placeholder="First name" formControlName="title" minlength="2" required name="firstname" id="title"></textarea>
+                  Titre : <textarea matInput placeholder="Titre" formControlName="title" minlength="2" required name="title" id="title"></textarea>
                   <mat-error *ngIf="form.get('title').dirty && form.get('title').hasError('required')" class="error">
                     Le titre de votre Redirectr est <strong>obligatoire</strong>.
                   </mat-error>
@@ -29,7 +29,7 @@
 
               <div class="inside_new_redirectr">
                 <mat-form-field class="full-width" [class.mgb15]="form.get('description').dirty && form.get('description').invalid">
-                  Description : <textarea matInput placeholder="First name" formControlName="description" minlength="2" required name="description" id="description"></textarea>
+                  Description : <textarea matInput placeholder="Description" formControlName="description" minlength="2" required name="description" id="description"></textarea>
                   <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('required')" class="error">
                     Le description de votre Redirectr est <strong>obligatoire</strong>.
                   </mat-error>
@@ -43,7 +43,7 @@
 
               <div class="inside_new_redirectr">
                 <mat-form-field class="full-width" [class.mgb15]="form.get('main_link').dirty && form.get('main_link').invalid">
-                  Lien de redirection : <textarea matInput placeholder="First name" formControlName="main_link" minlength="2" required name="main_link" id="main_link"></textarea>
+                  Lien de redirection : <textarea matInput placeholder="Lien de redirection" formControlName="main_link" minlength="2" required name="main_link" id="main_link"></textarea>
                   <mat-error *ngIf="form.get('main_link').dirty && form.get('main_link').hasError('required')" class="error">
                     Le lien de redirection de votre Redirectr est <strong>obligatoire</strong>.
                   </mat-error>
