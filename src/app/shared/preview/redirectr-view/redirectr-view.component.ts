@@ -21,7 +21,6 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
     private _dialogStatus: string;
 
   constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog) {
-    super();
     this._see = false;
     this._newLink = 'Il n\'y a aucun lien de redirection ici, ajoutez-en un ! (au format http://... ou https://...)';
     this._alredyFocused = false;
