@@ -12,10 +12,12 @@ export class HomeComponent implements OnInit {
 
   private _top3: any[];
   private _redirectrs: any[];
+    private _view: string;
 
   constructor(private _router: Router, private _redirectrService: RedirectrService) {
     this._top3 = [];
     this._redirectrs = [];
+    this._view = 'list';
   }
 
   ngOnInit() {
@@ -34,4 +36,13 @@ export class HomeComponent implements OnInit {
   get top3(): any[] {
     return this._top3;
   }
+
+    get view(): string {
+        return this._view;
+    }
+
+    switchView() {
+        this._view = (this._view === 'card') ? 'list' : 'card';
+    }
+
 }
