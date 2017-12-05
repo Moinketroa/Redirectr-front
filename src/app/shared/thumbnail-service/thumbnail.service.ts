@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ThumbnailService {
@@ -9,11 +10,13 @@ export class ThumbnailService {
   private _cx: string;
 
   constructor(private _http: HttpClient) {
-    //this._key = 'AIzaSyAqbVu4fIHVjkuEAdnp8l8maKixZZq429o';
+    this._key = 'AIzaSyCH71vXl_9N3hIOAI34b3JbSR0F_sIkIds';
     // backup keys
-       this._key = 'AIzaSyDi9Lr6qsPTLkL7KSmZvs84g5pZat-QXvo';
-      // this._key = 'AIzaSyCH71vXl_9N3hIOAI34b3JbSR0F_sIkIds';
+      // this._key = 'AIzaSyBX9XGnGmCyQB7cLovpyDwNagPaesbK3lU';
       // this._key = 'AIzaSyBt2E0rX-FVj-aWH8R3igE9Eu4OZKp0WgY';
+      // this._key = 'AIzaSyAPXj1T7gyv-5uMyYVjE-hZwoXpkEEpRaI';
+      // this._key = 'AIzaSyDR-gbTyjLU350z1iOG1AhRxcyQIyH1vNc';
+      // this._key = 'AIzaSyCrWHuIJSWugYOX8vZTc-fD6c2v62AG7YA';
 
     this._cx = '012922907986302901822:xk3s7tfrcxg';
     this._googleSearchAPIURL = 'https://www.googleapis.com/customsearch/v1?key=%20:key&cx=:cx&q=:query&searchType=image&alt=json';
@@ -24,6 +27,7 @@ export class ThumbnailService {
 
   fetchThumbnail(query: string): Observable<any> {
     return this._http.get(this._googleSearchAPIURL.replace(':query', query), this._options())
+      .catch((err: HttpErrorResponse) => return Observable.empty);
   }
 
   private _options(headerList: Object = {}): any {
