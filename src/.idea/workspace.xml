@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add-redirectr.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add-redirectr.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="111" lean-forward="false" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="111" />
+            <state relative-caret-position="319">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file leaf-file-name="add-redirectr.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="538">
+              <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
               <folding>
                 <element signature="e#0#90#0" expanded="true" />
               </folding>
@@ -36,24 +36,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redirectr-view.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.ts">
+      <file leaf-file-name="custom-validators.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/add-redirectr/custom-validators.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="115" lean-forward="false" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-redirectr.component.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.css">
+      <file leaf-file-name="redirectr-view.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="392">
+              <caret line="111" column="21" lean-forward="true" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,13 +143,14 @@
         <option value="$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.css" />
         <option value="$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.html" />
         <option value="$PROJECT_DIR$/app/app.routes.ts" />
-        <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html" />
         <option value="$PROJECT_DIR$/app/update/update.component.css" />
         <option value="$PROJECT_DIR$/app/shared/redirectr-service/redirectr.service.ts" />
         <option value="$PROJECT_DIR$/app/update/update.component.html" />
-        <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts" />
         <option value="$PROJECT_DIR$/app/update/update.component.ts" />
         <option value="$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.ts" />
+        <option value="$PROJECT_DIR$/app/add-redirectr/custom-validators.ts" />
+        <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts" />
+        <option value="$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html" />
       </list>
     </option>
   </component>
@@ -297,6 +298,11 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/add-redirectr" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -328,12 +334,12 @@
       <workItem from="1512386142357" duration="800000" />
       <workItem from="1512388666655" duration="976000" />
       <workItem from="1512404300230" duration="10685000" />
-      <workItem from="1512467115506" duration="486000" />
+      <workItem from="1512467115506" duration="2635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31230000" />
+    <option name="totallyTimeSpent" value="33379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -369,13 +375,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -692,30 +691,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="111" lean-forward="false" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/update/update.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#4;n#td#0;n#tr#0;n#table#0;n#form#0;n#mat-dialog-content#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -750,11 +731,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/shared/preview/redirectr-view/redirectr-view.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="115" lean-forward="false" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
+        <state relative-caret-position="392">
+          <caret line="111" column="21" lean-forward="true" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="49" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/add-redirectr/custom-validators.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/add-redirectr/add-redirectr.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

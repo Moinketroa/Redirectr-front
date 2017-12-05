@@ -50,6 +50,9 @@
                   <mat-error *ngIf="form.get('main_link').dirty && form.get('main_link').hasError('minlength')" class="error">
                     Le lien de redirection de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
                   </mat-error>
+                  <mat-error *ngIf="form.get('main_link').dirty && form.get('main_link').hasError('urlFormat')" class="error">
+                    Le lien de redirection de votre Redirectr doit commencer par <strong>http:// </strong> ou <strong>https://</strong>.
+                  </mat-error>
                 </mat-form-field>
               </div>
 

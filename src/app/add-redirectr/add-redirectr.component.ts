@@ -3,7 +3,7 @@ import { FormGroup, FormArray, FormBuilder,
     Validators,ReactiveFormsModule, FormControl  } from '@angular/forms';
 import {RedirectrService} from '../shared/redirectr-service/redirectr.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { CustomValidators } from './custom-validators';
 
 @Component({
   selector: 'redirectr-add-redirectr',
@@ -97,8 +97,10 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
                 Validators.required, Validators.minLength(2)
             ])),
             main_link: new FormControl('', Validators.compose([
-                Validators.required, Validators.minLength(2)
+                Validators.required, Validators.minLength(2),
+                Validators.required, CustomValidators.urlFormat
             ]))
         });
     }
+
 }
