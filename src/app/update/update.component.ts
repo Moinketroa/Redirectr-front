@@ -79,10 +79,8 @@ export class UpdateComponent implements OnInit {
 
         this._redirectrService
             .update(this._redirectr)
-            .subscribe((redirectr: any) => this._redirectr = redirectr);
-
-        //ici redirection vers le nouveau redirectr
-        this._router.navigate(['/home/']);
+            .subscribe((redirectr: any) => {this._redirectr = redirectr;
+            this._router.navigate(['/redirectr',this._redirectr.id]);});
 
     }
 }

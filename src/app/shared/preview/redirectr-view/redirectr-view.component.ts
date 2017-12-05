@@ -23,7 +23,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog) {
     super();
     this._see = false;
-    this._newLink = 'Il n\'y a aucun lien de redirection ici, ajoutez-en un !';
+    this._newLink = 'Il n\'y a aucun lien de redirection ici, ajoutez-en un ! (au format http://... ou https://...)';
     this._alredyFocused = false;
     this._editing = [];
     this._alreadyEditing = false;
@@ -88,7 +88,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
   set redirectr(value: any) {
     this._redirectr = value;
     if (this._redirectr.main_link >= 0) {
-      this._newLink = 'Ajoutez un lien de backup !';
+      this._newLink = 'Ajoutez un lien de backup ! (au format http://... ou https://...)';
       this._redirectr.links.forEach(_ => this._editing.push(false));
     }
   }
