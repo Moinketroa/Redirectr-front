@@ -45,7 +45,7 @@
 
 .mat-card-description{
   padding-top: 10px;
-  height: 90%;
+  height: 48px;
   width: 95%;
   margin-top: -1px;
   font-size: 13px;
@@ -53,4 +53,19 @@
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.mat-card-picture{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.thumbnail{
+  max-height: 70px;
+  max-width: 80%;
 }
