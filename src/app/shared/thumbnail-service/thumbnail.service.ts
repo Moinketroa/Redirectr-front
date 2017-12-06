@@ -10,9 +10,9 @@ export class ThumbnailService {
   private _cx: string;
 
   constructor(private _http: HttpClient) {
-    this._key = 'AIzaSyCH71vXl_9N3hIOAI34b3JbSR0F_sIkIds';
+    // this._key = 'AIzaSyCH71vXl_9N3hIOAI34b3JbSR0F_sIkIds';
     // backup keys
-      // this._key = 'AIzaSyBX9XGnGmCyQB7cLovpyDwNagPaesbK3lU';
+      this._key = 'AIzaSyBX9XGnGmCyQB7cLovpyDwNagPaesbK3lU';
       // this._key = 'AIzaSyBt2E0rX-FVj-aWH8R3igE9Eu4OZKp0WgY';
       // this._key = 'AIzaSyAPXj1T7gyv-5uMyYVjE-hZwoXpkEEpRaI';
       // this._key = 'AIzaSyDR-gbTyjLU350z1iOG1AhRxcyQIyH1vNc';
@@ -25,14 +25,24 @@ export class ThumbnailService {
     console.log(this._googleSearchAPIURL);
   }
 
-  fetchThumbnail(query: string): Observable<any> {
+  fetchThumbnail(query: string): Observable<any|void> {
     return this._http.get(this._googleSearchAPIURL.replace(':query', query), this._options())
-      .catch((err: HttpErrorResponse) => return Observable.empty);
+      .catch((err: HttpErrorResponse) => this._handleError(err));
   }
 
   private _options(headerList: Object = {}): any {
         const headers = new HttpHeaders(Object.assign({ 'Content-Type': 'application/json' }, headerList));
         return { headers };
+  }
+
+  private _handleError(err: any): Observable<any> {
+      if (err.error instanceof Error) {
+
+      } else {
+
+      }
+
+      return Observable.empty();
   }
 
 }
