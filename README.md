@@ -20,11 +20,11 @@ npm install -g yarn
 yarn global add @angular/cli  
 yarn install  
 
-## Development server
+## Run
 
-Run the Redirectr API
+First, run the Redirectr API
 
-Run `ng serve` or `yarn run start` for a dev server. Navigate to `http://localhost:4242/`. The app will automatically reload if you change any of the source files.
+Then run `ng serve` or `yarn run start`. Navigate to `http://localhost:4242/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
