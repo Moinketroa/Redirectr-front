@@ -6,7 +6,7 @@
 
   <div class="mat-redirectr-link">
     <a [routerLink]="['/link', redirectr.id]">
-      localhost:4242/#/link/{{ redirectr.id }}
+      0.0.0.0:4444/#/link/{{ redirectr.id }}
     </a>
   </div>
 
@@ -17,7 +17,7 @@
 
     <div class="mat-description-p">
       {{ description }}
-      <a (click)="changeSee()"><span style="font-weight: bold">{{ see }}</span></a>
+      <a (click)="changeSee()"><b>{{ see }}</b></a>
     </div>
 
   </div>

@@ -20,7 +20,6 @@ import { SearchComponent } from './search/search.component';
 import { RedirectrViewComponent } from './shared/preview/redirectr-view/redirectr-view.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UpdateComponent } from './update/update.component';
-import { ThumbnailService } from './shared/thumbnail-service/thumbnail.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +48,7 @@ import { ThumbnailService } from './shared/thumbnail-service/thumbnail.service';
     ReactiveFormsModule,
     APP_ROUTES
   ],
-  providers: [RedirectrService, ThumbnailService],
+  providers: [RedirectrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PreviewComponent } from '../preview.component';
 import { RedirectrService } from '../../redirectr-service/redirectr.service';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
-import { ThumbnailService } from '../../thumbnail-service/thumbnail.service';
 
 @Component({
   selector: 'redirectr-redirectr-view',
@@ -21,8 +19,8 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
     // private property to store dialogStatus value
     private _dialogStatus: string;
 
-  constructor(private _redirectrService: RedirectrService, private _router: Router, private _dialog: MatDialog, protected _thumbnailService: ThumbnailService) {
-    super(_thumbnailService);
+  constructor(private _redirectrService: RedirectrService, private _router: Router) {
+    super();
     this._see = false;
     this._newLink = 'Il n\'y a aucun lien de redirection ici, ajoutez-en un ! (au format http://... ou https://...)';
     this._alredyFocused = false;
@@ -170,7 +168,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
 
   showDialog() {
 
-      if (this._dialogStatus == 'active') {
+      if (this._dialogStatus === 'active') {
           this._dialogStatus = 'inactive';
       }else{
           this._dialogStatus = 'active';
@@ -180,7 +178,7 @@ export class RedirectrViewComponent extends PreviewComponent implements OnInit {
 
     updateRedirectr(redirectr: any) {
         this._redirectrService.fetchOne(this._redirectr.id)
-            .subscribe(_ => this._router.navigate(['/update',this._redirectr.id]));
+            .subscribe(_ => this._router.navigate(['/update', this._redirectr.id]));
     }
 
 }

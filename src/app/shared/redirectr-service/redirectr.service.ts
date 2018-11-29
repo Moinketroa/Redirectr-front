@@ -40,12 +40,6 @@ export class RedirectrService {
       .catch((err: HttpErrorResponse) => this._redirectionError(err));
   }
 
-  fetchTop3(): Observable<any[]> {
-    return this._http.get(this._backendURL.top3Redirectrs, this._options())
-      .filter((_: any) => !!_)
-      .defaultIfEmpty([]);
-  }
-
   search(tags: string): Observable<any[]> {
     return this._http.get(this._backendURL.searchRedirectrs.replace(':tags', tags.replace(' ', '+')), this._options())
       .filter((_: any) => !!_)
@@ -66,10 +60,6 @@ export class RedirectrService {
       .defaultIfEmpty([]);
   }
 
-  access(redirectr: any): Observable<any> {
-    return this._http.put(this._backendURL.accessRedirectrs.replace(':id', redirectr.id), this._accessVersion(redirectr), this._options());
-  }
-
   /**
    * Function to return request options
    *
@@ -81,7 +71,7 @@ export class RedirectrService {
   }
 
   private _condensedVersion(redirectr: any): any {
-    let redirectr_res: any = {};
+    const redirectr_res: any = {};
     redirectr_res.title = redirectr.title;
     redirectr_res.description = redirectr.description;
     redirectr_res.main_link = redirectr.main_link;
@@ -90,7 +80,7 @@ export class RedirectrService {
   }
 
   private _accessVersion(redirectr: any): any {
-    let redirectr_res: any = this._condensedVersion(redirectr);
+    const redirectr_res: any = this._condensedVersion(redirectr);
     redirectr_res.clicks = redirectr.clicks;
     return redirectr_res;
   }

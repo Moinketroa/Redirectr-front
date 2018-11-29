@@ -31,10 +31,10 @@
                 <mat-form-field class="full-width" [class.mgb15]="form.get('description').dirty && form.get('description').invalid">
                   Description : <textarea matInput placeholder="Description" formControlName="description" minlength="2" required name="description" id="description"></textarea>
                   <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('required')" class="error">
-                    Le description de votre Redirectr est <strong>obligatoire</strong>.
+                    La description de votre Redirectr est <strong>obligatoire</strong>.
                   </mat-error>
                   <mat-error *ngIf="form.get('description').dirty && form.get('description').hasError('minlength')" class="error">
-                    Le titre de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
+                    La description de votre Redirectr doit contenir au moins <strong>2 caractères</strong>.
                   </mat-error>
                 </mat-form-field>
               </div>

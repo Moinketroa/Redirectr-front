@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
-import { FormGroup, FormArray, FormBuilder,
-    Validators,ReactiveFormsModule, FormControl  } from '@angular/forms';
+import { FormGroup, FormArray, FormBuilder, Validators, ReactiveFormsModule, FormControl  } from '@angular/forms';
 import {RedirectrService} from '../shared/redirectr-service/redirectr.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomValidators } from './custom-validators';
@@ -72,12 +71,10 @@ export class AddRedirectrComponent implements OnInit, OnChanges {
 
         this._redirectrService
             .create(this._redirectr)
-            .flatMap(_ => this._redirectrService.fetch())
-            .subscribe((redirectr: any) => this._redirectr = redirectr);
-
-        //ici redirection vers le nouveau redirectr
-        this._router.navigate(['/home']);
-
+            .flatMap(_ => this._redirectrService.fetchOne(_.id))
+            .subscribe((redirectr: any) =>
+              this._router.navigate(['/redirectr/', redirectr.id])
+            );
     }
 
     /**

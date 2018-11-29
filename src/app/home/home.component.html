@@ -1,49 +1,32 @@
- <div class="component_home">
+<div class="component_home">
+  <div class="title">
+    Liste des <span style="font-weight: bold">Redirectr</span>
+  </div>
 
-      <div class="title">
-        Top 3 des <span style="font-weight: bold">Redirectr</span> les plus visités
-      </div>
-
-      <div class="top_redirectr_container">
-        <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of top3">
-          <div class="inside_top_redirectr_container">
-            <redirectr-card [redirectr]="redirectr"></redirectr-card>
-          </div>
-        </a>
-      </div>
+  <div [ngSwitch]="view">
+    <div *ngSwitchCase="'card'" class="card_redirectr_container">
+      <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of redirectrs">
+        <div class="inside_top_redirectr_container">
+          <redirectr-card [redirectr]="redirectr"></redirectr-card>
+        </div>
+      </a>
     </div>
 
-      <div class="blue_line"></div>
+    <div *ngSwitchCase="'list'" class="list_redirectr_container">
+      <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of redirectrs">
+        <redirectr-list [redirectr]="redirectr"></redirectr-list>
+      </a>
+    </div>
+  </div>
 
-    <div class="component_home">
-      <div class="title">
-        Liste des <span style="font-weight: bold">Redirectr</span>
-      </div>
+  <div>
+    <button (click)="switchView()" mat-fab class="buttons-fab" color="primary">
+      <i class="material-icons" *ngIf="view === 'card'">view_headline</i>
+      <i class="material-icons" *ngIf="view === 'list'" >view_module</i>
+    </button>
+  </div>
 
-        <div [ngSwitch]="view">
-            <div *ngSwitchCase="'card'" class="card_redirectr_container">
-                <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of redirectrs">
-                    <div class="inside_top_redirectr_container">
-                        <redirectr-card [redirectr]="redirectr"></redirectr-card>
-                    </div>
-                </a>
-            </div>
-
-            <div *ngSwitchCase="'list'" class="list_redirectr_container">
-                <a class="preview-link" [routerLink]="['/redirectr', redirectr.id]" *ngFor="let redirectr of redirectrs">
-                    <redirectr-list [redirectr]="redirectr"></redirectr-list>
-                </a>
-            </div>
-        </div>
-
-        <div>
-            <button (click)="switchView()" mat-fab class="buttons-fab" color="primary">
-                <i class="material-icons" *ngIf="view === 'card'">view_headline</i>
-                <i class="material-icons" *ngIf="view === 'list'" >view_module</i>
-            </button>
-        </div>
-
-      <div class="space_for_footer"></div>
+  <div class="space_for_footer"></div>
 
 </div>
 

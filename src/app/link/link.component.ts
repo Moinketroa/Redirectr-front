@@ -32,8 +32,7 @@ export class LinkComponent implements OnInit {
           this._renderer.setProperty(this.hidden.nativeElement, 'href', this._mainLink);
           this.hidden.nativeElement.click();
         }
-        this._redirectrService.access(redirectr)
-          .subscribe((red: any) => this._redirectr = red);
+        this._redirectr = redirectr;
       });
   }
 
